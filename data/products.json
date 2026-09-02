@@ -1,0 +1,20 @@
+{
+  "confidence-journal": {
+    "name": "The Confidence Journal",
+    "price": "$27",
+    "url": "https://YOUR-DOMAIN.com/products/confidence-journal",
+    "note": "Daily prompts for the woman building her next chapter."
+  },
+  "next-chapter-planner": {
+    "name": "Next Chapter Planner",
+    "price": "$34",
+    "url": "https://YOUR-DOMAIN.com/products/next-chapter-planner",
+    "note": "Plan the identity shift, not just the to-do list."
+  },
+  "room-finder-guide": {
+    "name": "The Room Finder Guide",
+    "price": "$19",
+    "url": "https://YOUR-DOMAIN.com/products/room-finder-guide",
+    "note": "How to find (and get invited into) better rooms."
+  }
+}
