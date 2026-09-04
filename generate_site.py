@@ -105,6 +105,7 @@ HEADER = '''<header>
       <li><a href="index.html#journey">The Journey</a></li>
       <li><a href="index.html#pain">For You</a></li>
       <li><a href="blog.html">Journal</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
     </ul>
   </nav>
   <a href="index.html#join" class="nav-cta">Start Your Next Chapter</a>
@@ -123,6 +124,7 @@ FOOTER = '''<footer>
         <li><a href="index.html#journey">The Journey</a></li>
         <li><a href="index.html#pain">For You</a></li>
         <li><a href="blog.html">Journal</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
         <li><a href="index.html#join">Community</a></li>
       </ul>
     </div>

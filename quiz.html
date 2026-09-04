@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signature Nail Identity Quiz | Nailed &amp; Inspired</title>
+<meta name="description" content="Discover your Signature Nail Identity and what your nail style says about the woman you're becoming. Take the free 2-minute quiz.">
+<meta property="og:title" content="Signature Nail Identity Quiz | Nailed & Inspired">
+<meta property="og:description" content="Discover your Signature Nail Identity and what your nail style says about the woman you're becoming. Take the free 2-minute quiz.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+
+<header>
+  <a href="index.html" class="logo logo-flex"><img src="logo.png" alt="Nailed and Inspired logo" class="logo-mark">Nailed <span>&amp;</span> Inspired</a>
+  <nav>
+    <ul>
+      <li><a href="index.html#gap">The Shift</a></li>
+      <li><a href="index.html#journey">The Journey</a></li>
+      <li><a href="index.html#pain">For You</a></li>
+      <li><a href="blog.html">Journal</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+    </ul>
+  </nav>
+  <a href="index.html#join" class="nav-cta">Start Your Next Chapter</a>
+</header>
+
+<main>
+<section class="quiz-shell">
+  <div class="wrap">
+    <div id="quiz-app" aria-live="polite">
+
+      <!-- LANDING -->
+      <section class="quiz-stage quiz-landing is-active" data-panel="landing">
+        <div class="eyebrow-line"><span class="rule"></span><span>SIGNATURE NAIL IDENTITY QUIZ</span></div>
+        <h1>What does your nail style say about the woman you're becoming?</h1>
+        <p class="lede">Your nails might be saying more about you than you think. Take this 2-minute quiz to discover your Signature Nail Identity&mdash;the energy, aesthetic, and version of yourself your style naturally gravitates toward. There are no right or wrong answers. Choose the answer that feels most like you.</p>
+        <button type="button" class="btn-primary quiz-start-btn" id="quiz-start-btn">Start The Quiz</button>
+        <p class="quiz-microcopy">2 minutes &middot; No right or wrong answers</p>
+      </section>
+
+      <!-- QUESTIONS -->
+      <section class="quiz-stage quiz-question-stage" data-panel="questions">
+        <div class="quiz-progress">
+          <div class="quiz-progress-label">
+            <span id="quiz-progress-text">01 / 08</span>
+          </div>
+          <div class="quiz-progress-track"><div class="quiz-progress-fill" id="quiz-progress-fill" style="width:12.5%;"></div></div>
+        </div>
+        <div class="quiz-question" id="quiz-question-mount">
+          <h2 id="quiz-question-text"></h2>
+          <ul class="quiz-options" id="quiz-options-list" role="group" aria-labelledby="quiz-question-text"></ul>
+        </div>
+        <div class="quiz-controls">
+          <button type="button" class="quiz-btn-back" id="quiz-back-btn">&larr; Back</button>
+          <button type="button" class="quiz-btn-next" id="quiz-next-btn" disabled>Next</button>
+        </div>
+      </section>
+
+      <!-- EMAIL CAPTURE -->
+      <section class="quiz-stage quiz-email" data-panel="email">
+        <h2 class="serif">Your result is ready.</h2>
+        <p class="lede">You've got a Signature Nail Identity. Now let's see what it says about you.</p>
+        <form class="quiz-email-form" id="quiz-email-form" novalidate>
+          <label class="quiz-email-label" for="quiz-email-input">EMAIL ADDRESS</label>
+          <input class="quiz-email-input" type="email" id="quiz-email-input" name="email" placeholder="you@email.com" autocomplete="email" required>
+          <div class="quiz-email-error" id="quiz-email-error" role="alert"></div>
+          <button type="submit" class="btn-primary quiz-email-submit" id="quiz-email-submit">Reveal My Nail Identity</button>
+        </form>
+        <p class="quiz-email-note">No spam. Just inspiration, identity, and your next chapter.</p>
+        <ul class="quiz-checklist">
+          <li><span class="check">&#10003;</span>Your Signature Nail Identity</li>
+          <li><span class="check">&#10003;</span>What your aesthetic says about you</li>
+          <li><span class="check">&#10003;</span>Nail inspiration matched to your identity</li>
+          <li><span class="check">&#10003;</span>Your free Signature Nail Identity Guide</li>
+          <li><span class="check">&#10003;</span>Your next step toward discovering your next era</li>
+        </ul>
+      </section>
+
+      <!-- RESULT -->
+      <section class="quiz-stage quiz-result" data-panel="result">
+        <div class="quiz-banner">
+          <h3>You're In. &#128077;&#127997;</h3>
+          <p>Check your inbox &mdash; we've sent your result and your free Signature Nail Identity Guide.</p>
+        </div>
+
+        <span class="quiz-result-kicker">YOUR SIGNATURE NAIL IDENTITY</span>
+        <h1 id="quiz-result-headline"></h1>
+        <div class="quiz-result-body" id="quiz-result-body"></div>
+        <p class="quiz-result-energy" id="quiz-result-energy"></p>
+
+        <div class="quiz-palette-block">
+          <span class="quiz-palette-label">YOUR SIGNATURE NAIL PALETTE</span>
+          <div class="quiz-palette" id="quiz-result-palette"></div>
+        </div>
+
+        <div class="quiz-next-move">
+          <span class="kicker">YOUR NEXT MOVE</span>
+          <p id="quiz-result-nextmove"></p>
+        </div>
+
+        <button type="button" class="btn-primary quiz-result-cta" id="quiz-guide-btn-1">Get My Signature Nail Identity Guide</button>
+
+        <div class="quiz-universal">
+          <span class="quiz-result-kicker">YOUR NAILS ARE THE START.</span>
+          <h2 class="serif">Your aesthetic is one expression of your identity.</h2>
+          <p>But what happens when you start changing the rest of your life to match the woman you're becoming?</p>
+          <ul class="quiz-life-list">
+            <li>Your clothes.</li>
+            <li>Your environment.</li>
+            <li>Your routines.</li>
+            <li>Your friendships.</li>
+            <li>Your goals.</li>
+            <li>Your standards.</li>
+            <li>Your life.</li>
+          </ul>
+          <p class="tail">The Signature Nail Identity Guide is your first step. Ready to go deeper?</p>
+          <button type="button" class="btn-primary quiz-result-cta" id="quiz-guide-btn-2">Download Your Free Signature Nail Identity Guide</button>
+        </div>
+
+        <div class="quiz-era">
+          <h3>What Era Are You In?</h3>
+          <p>Your nail identity tells you something about your energy. Now let's discover what chapter you're actually in.</p>
+          <button type="button" class="btn-ghost quiz-era-btn" id="quiz-era-btn">Take The &ldquo;What Era Are You In?&rdquo; Quiz &rarr;</button>
+          <span class="quiz-era-soon">Coming soon</span>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="quiz-toast" id="quiz-toast" role="status"></div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo logo-flex"><img src="logo.png" alt="Nailed and Inspired logo" class="logo-mark">Nailed <span>&amp;</span> Inspired</a>
+        <p>Beauty is the beginning. Becoming is the mission.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html#gap">The Shift</a></li>
+        <li><a href="index.html#journey">The Journey</a></li>
+        <li><a href="index.html#pain">For You</a></li>
+        <li><a href="blog.html">Journal</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="index.html#join">Community</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">&copy; Nailed &amp; Inspired &mdash; part of the R3UP ecosystem.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ==========================================================
+     EXACT QUIZ CONTENT — wording, order, and count are fixed.
+     Do not rewrite, reorder, or shorten any question or answer.
+     ========================================================== */
+  var QUESTIONS = [
+    {
+      text: "You walk into a room. What kind of energy do you naturally want to give off?",
+      options: [
+        { letter: "A", text: "\u201cYou\u2019ll have to get to know me to figure me out.\u201d" },
+        { letter: "B", text: "\u201cI\u2019m here. You\u2019re going to notice me.\u201d" },
+        { letter: "C", text: "\u201cI don\u2019t need attention to know my worth.\u201d" },
+        { letter: "D", text: "\u201cI\u2019m not interested in fitting into the room.\u201d" },
+        { letter: "E", text: "\u201cI\u2019m different from who I was a year ago.\u201d" }
+      ]
+    },
+    {
+      text: "Your ideal nail set catches your eye. What makes you stop scrolling?",
+      options: [
+        { letter: "A", text: "Smoky, dark, glossy, mysterious details." },
+        { letter: "B", text: "Chrome, length, statement details, something impossible to ignore." },
+        { letter: "C", text: "Milky neutrals, clean lines, soft French, effortless elegance." },
+        { letter: "D", text: "Unexpected colors, artistic details, unusual shapes or combinations." },
+        { letter: "E", text: "Something you\u2019ve never tried before that makes you think, \u201cMaybe this is my new thing.\u201d" }
+      ]
+    },
+    {
+      text: "Which compliment would secretly mean the most to you?",
+      options: [
+        { letter: "A", text: "\u201cThere\u2019s something about you I can\u2019t quite figure out.\u201d" },
+        { letter: "B", text: "\u201cYou have such a strong presence.\u201d" },
+        { letter: "C", text: "\u201cYou make everything look effortless.\u201d" },
+        { letter: "D", text: "\u201cYou\u2019re completely yourself.\u201d" },
+        { letter: "E", text: "\u201cYou seem like you\u2019re becoming a whole new person.\u201d" }
+      ]
+    },
+    {
+      text: "Your Friday night looks most like\u2026",
+      options: [
+        { letter: "A", text: "Somewhere intimate, low-key, beautifully dressed, and slightly mysterious." },
+        { letter: "B", text: "Somewhere exciting where you can dress up and make an entrance." },
+        { letter: "C", text: "A beautiful dinner, good conversation, and a night that feels peaceful." },
+        { letter: "D", text: "Whatever sounds interesting\u2014I don\u2019t really do predictable." },
+        { letter: "E", text: "Trying something new, going somewhere different, or spontaneously changing the plan." }
+      ]
+    },
+    {
+      text: "Which statement feels closest to your current chapter?",
+      options: [
+        { letter: "A", text: "I\u2019m becoming more private about what I\u2019m building." },
+        { letter: "B", text: "I\u2019m done playing small." },
+        { letter: "C", text: "I\u2019m learning that confidence doesn\u2019t have to be loud." },
+        { letter: "D", text: "I\u2019m caring less about what other people expect from me." },
+        { letter: "E", text: "I\u2019m figuring out who I am now that I\u2019ve outgrown who I used to be." }
+      ]
+    },
+    {
+      text: "Pick the wardrobe energy that feels most like you.",
+      options: [
+        { letter: "A", text: "Dark neutrals, sleek silhouettes, understated but intriguing." },
+        { letter: "B", text: "Statement pieces, bold accessories, dramatic details." },
+        { letter: "C", text: "Clean neutrals, feminine pieces, timeless silhouettes." },
+        { letter: "D", text: "Unexpected combinations, expressive pieces, personality everywhere." },
+        { letter: "E", text: "A constantly evolving mix\u2014I\u2019m still discovering what feels like me." }
+      ]
+    },
+    {
+      text: "When your life starts changing, what do you naturally want to change first?",
+      options: [
+        { letter: "A", text: "My privacy, boundaries, and the people who have access to me." },
+        { letter: "B", text: "My appearance\u2014I want the outside to reflect the new energy immediately." },
+        { letter: "C", text: "My routines and environment\u2014I want everything to feel more intentional." },
+        { letter: "D", text: "My rules\u2014I want to stop doing things just because they\u2019re expected." },
+        { letter: "E", text: "Almost everything. I want to experiment until I find what fits." }
+      ]
+    },
+    {
+      text: "Complete this sentence: \u201cThe woman I\u2019m becoming\u2026\u201d",
+      options: [
+        { letter: "A", text: "\u2026doesn\u2019t need to explain herself." },
+        { letter: "B", text: "\u2026takes up space without apologizing." },
+        { letter: "C", text: "\u2026knows her worth without needing to prove it." },
+        { letter: "D", text: "\u2026isn\u2019t afraid to be different." },
+        { letter: "E", text: "\u2026is still being discovered." }
+      ]
+    }
+  ];
+
+  var RESULTS = {
+    A: {
+      headline: "You\u2019re The Mysterious Woman",
+      body: [
+        "Smoky. Dark. Intriguing. You don\u2019t explain yourself.",
+        "You don\u2019t need to reveal everything to everyone.",
+        "There\u2019s power in being selective about what you share, who gets access to you, and how much of yourself you put on display.",
+        "Your aesthetic naturally gravitates toward depth\u2014smoky tones, espresso, black, deep burgundy, sheer neutrals, glossy finishes, and details that make people look twice.",
+        "Your nails don\u2019t scream for attention.",
+        "They pull it in."
+      ],
+      energy: "\u201cYou don\u2019t need to know everything about me.\u201d",
+      palette: ["Smoky brown", "Black", "Espresso", "Deep burgundy", "Sheer neutrals"],
+      nextMove: "What would change if you stopped feeling the need to explain every move you\u2019re making?"
+    },
+    B: {
+      headline: "You\u2019re The Bold Woman",
+      body: [
+        "Chrome. Statement designs. Long sets. You don\u2019t shrink.",
+        "You weren\u2019t meant to disappear into the background.",
+        "You naturally gravitate toward things with presence\u2014chrome, statement designs, length, contrast, metallics, and details that demand a second look.",
+        "Your aesthetic says: I\u2019m comfortable being seen.",
+        "And your next level may require exactly that. Not becoming louder for attention. Becoming more willing to take up space."
+      ],
+      energy: "\u201cI don\u2019t need permission to become more visible.\u201d",
+      palette: ["Chrome", "Metallics", "Red", "Electric blue", "High-contrast neutrals"],
+      nextMove: "Where in my life am I still playing smaller than I actually want to?"
+    },
+    C: {
+      headline: "You\u2019re The Soft Power Woman",
+      body: [
+        "Clean. Feminine. Elegant. Quiet confidence.",
+        "You don\u2019t need to be the loudest person in the room.",
+        "Your power comes from knowing yourself.",
+        "You gravitate toward clean aesthetics, feminine details, timeless looks, soft neutrals, milky whites, blush, cream, and understated elegance.",
+        "Your style says: I know who I am. And I don\u2019t need to prove it."
+      ],
+      energy: "\u201cSoft doesn\u2019t mean small.\u201d",
+      palette: ["Milky white", "Nude", "Blush", "Cream", "Soft pink", "Champagne"],
+      nextMove: "What would become possible if I stopped confusing softness with weakness?"
+    },
+    D: {
+      headline: "You\u2019re The Unapologetic Woman",
+      body: [
+        "Unexpected. Artistic. Expressive. Completely yourself.",
+        "You don\u2019t want your aesthetic to look like everyone else\u2019s. You want it to feel like you.",
+        "You naturally gravitate toward unexpected colors, creative combinations, shapes, textures, art, and details that make your personality impossible to miss.",
+        "Trends can inspire you. But they don\u2019t define you."
+      ],
+      energy: "\u201cMy personality doesn\u2019t need to fit inside a trend.\u201d",
+      palette: ["Jewel tones", "Brights", "Unexpected combinations", "Black + color", "Metallic accents"],
+      nextMove: "Where am I still editing myself to make other people comfortable?"
+    },
+    E: {
+      headline: "You\u2019re The Becoming Woman",
+      body: [
+        "Experimental. Changing. Evolving. Reinventing herself.",
+        "Here\u2019s the thing: you may not have your aesthetic completely figured out. And that\u2019s okay.",
+        "You\u2019re experimenting. Trying new things. Changing your mind. Leaving old versions of yourself behind.",
+        "Your nails might change because you are changing.",
+        "You don\u2019t need to know exactly who you\u2019re becoming before you begin becoming her."
+      ],
+      energy: "\u201cI\u2019m still discovering who I\u2019m becoming.\u201d",
+      palette: ["Experimental colors", "Mixed aesthetics", "Transitional neutrals", "Unexpected combinations"],
+      nextMove: "What if I stopped waiting to have it all figured out?"
+    }
+  };
+
+  var PALETTE_SWATCH = {
+    "Smoky brown": "#7a5c47", "Black": "#100C10", "Espresso": "#3b2a20", "Deep burgundy": "#5c1f24", "Sheer neutrals": "#d8cdbe",
+    "Chrome": "#c7cbd1", "Metallics": "#b8a26a", "Red": "#a3231f", "Electric blue": "#2b5fd9", "High-contrast neutrals": "#1a1a1a",
+    "Milky white": "#f3ece0", "Nude": "#d9b99b", "Blush": "#e8b8b0", "Cream": "#efe3c8", "Soft pink": "#e6a9b0", "Champagne": "#e4d3a6",
+    "Jewel tones": "#5b3a6e", "Brights": "#c9a868", "Unexpected combinations": "#9c3b34", "Black + color": "#100C10", "Metallic accents": "#c9a868",
+    "Experimental colors": "#8a6aa0", "Mixed aesthetics": "#9c3b34", "Transitional neutrals": "#c9c0b4"
+  };
+
+  /* ==========================================================
+     SCORING — reusable, standalone. Q8 is the fixed tiebreaker.
+     ========================================================== */
+  function computeQuizResult(answers){
+    var counts = { A:0, B:0, C:0, D:0, E:0 };
+    answers.forEach(function(letter){ if (counts.hasOwnProperty(letter)) counts[letter]++; });
+    var maxCount = Math.max(counts.A, counts.B, counts.C, counts.D, counts.E);
+    var tied = Object.keys(counts).filter(function(letter){ return counts[letter] === maxCount; });
+    if (tied.length === 1) return tied[0];
+    return answers[7]; // Question 8 always breaks the tie
+  }
+
+  /* ==========================================================
+     LEAD SUBMISSION — clean placeholder abstraction.
+     No email provider is connected yet. Swap the body of this
+     function for a real request (e.g. a serverless endpoint or
+     an email platform's API) when one is ready. Never put API
+     keys in this file — call your own backend, which holds them.
+     ========================================================== */
+  function submitQuizLead(payload){
+    return new Promise(function(resolve){
+      try{
+        var existing = JSON.parse(localStorage.getItem("nailed_quiz_leads") || "[]");
+        existing.push(payload);
+        localStorage.setItem("nailed_quiz_leads", JSON.stringify(existing));
+      }catch(e){ /* localStorage unavailable — fail silently, don't block the reveal */ }
+
+      /*
+      fetch("/api/quiz-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      */
+
+      resolve(payload);
+    });
+  }
+
+  /* ==========================================================
+     APP STATE + WIRING
+     ========================================================== */
+  var answers = [];
+  var currentQuestion = 0;
+  var result = null;
+
+  var app = document.getElementById("quiz-app");
+  var stages = {
+    landing: app.querySelector('[data-panel="landing"]'),
+    questions: app.querySelector('[data-panel="questions"]'),
+    email: app.querySelector('[data-panel="email"]'),
+    result: app.querySelector('[data-panel="result"]')
+  };
+
+  function showStage(name){
+    Object.keys(stages).forEach(function(key){
+      stages[key].classList.toggle("is-active", key === name);
+    });
+    app.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function renderQuestion(){
+    var q = QUESTIONS[currentQuestion];
+    document.getElementById("quiz-question-text").textContent = q.text;
+    document.getElementById("quiz-progress-text").textContent =
+      String(currentQuestion + 1).padStart(2, "0") + " / 08";
+    document.getElementById("quiz-progress-fill").style.width =
+      (((currentQuestion + 1) / 8) * 100) + "%";
+
+    var list = document.getElementById("quiz-options-list");
+    list.innerHTML = "";
+    q.options.forEach(function(opt){
+      var li = document.createElement("li");
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "quiz-option";
+      btn.setAttribute("aria-pressed", answers[currentQuestion] === opt.letter ? "true" : "false");
+      btn.innerHTML = '<span class="quiz-option-letter">' + opt.letter + '.</span>' + opt.text;
+      btn.addEventListener("click", function(){
+        answers[currentQuestion] = opt.letter;
+        Array.prototype.forEach.call(list.querySelectorAll(".quiz-option"), function(b){
+          b.setAttribute("aria-pressed", "false");
+        });
+        btn.setAttribute("aria-pressed", "true");
+        nextBtn.disabled = false;
+      });
+      li.appendChild(btn);
+      list.appendChild(li);
+    });
+
+    backBtn.disabled = currentQuestion === 0;
+    nextBtn.disabled = !answers[currentQuestion];
+    nextBtn.textContent = currentQuestion === QUESTIONS.length - 1 ? "Continue" : "Next";
+  }
+
+  var startBtn = document.getElementById("quiz-start-btn");
+  var backBtn = document.getElementById("quiz-back-btn");
+  var nextBtn = document.getElementById("quiz-next-btn");
+
+  startBtn.addEventListener("click", function(){
+    currentQuestion = 0;
+    showStage("questions");
+    renderQuestion();
+  });
+
+  backBtn.addEventListener("click", function(){
+    if (currentQuestion === 0) return;
+    currentQuestion--;
+    renderQuestion();
+  });
+
+  nextBtn.addEventListener("click", function(){
+    if (!answers[currentQuestion]) return;
+    if (currentQuestion < QUESTIONS.length - 1){
+      currentQuestion++;
+      renderQuestion();
+    } else {
+      result = computeQuizResult(answers);
+      showStage("email");
+      document.getElementById("quiz-email-input").focus();
+    }
+  });
+
+  var emailForm = document.getElementById("quiz-email-form");
+  var emailInput = document.getElementById("quiz-email-input");
+  var emailError = document.getElementById("quiz-email-error");
+  var emailSubmit = document.getElementById("quiz-email-submit");
+
+  function isValidEmail(value){
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  }
+
+  emailForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    var email = emailInput.value.trim();
+    if (!isValidEmail(email)){
+      emailError.textContent = "Enter a valid email address.";
+      emailInput.focus();
+      return;
+    }
+    emailError.textContent = "";
+    emailSubmit.disabled = true;
+    emailSubmit.textContent = "Sending\u2026";
+
+    submitQuizLead({
+      email: email,
+      answers: answers.slice(),
+      result: result,
+      timestamp: new Date().toISOString()
+    }).then(function(){
+      renderResult(result);
+      showStage("result");
+      emailSubmit.disabled = false;
+      emailSubmit.textContent = "Reveal My Nail Identity";
+    });
+  });
+
+  function renderResult(letter){
+    var r = RESULTS[letter];
+    document.getElementById("quiz-result-headline").textContent = r.headline;
+
+    var bodyEl = document.getElementById("quiz-result-body");
+    bodyEl.innerHTML = "";
+    r.body.forEach(function(paragraph){
+      var p = document.createElement("p");
+      p.textContent = paragraph;
+      bodyEl.appendChild(p);
+    });
+
+    document.getElementById("quiz-result-energy").textContent = r.energy;
+    document.getElementById("quiz-result-nextmove").textContent = r.nextMove;
+
+    var paletteEl = document.getElementById("quiz-result-palette");
+    paletteEl.innerHTML = "";
+    r.palette.forEach(function(name, i){
+      var span = document.createElement("span");
+      span.className = "quiz-swatch";
+      var dot = document.createElement("span");
+      dot.className = "quiz-swatch-dot";
+      dot.style.background = PALETTE_SWATCH[name] || "var(--gold-soft)";
+      span.appendChild(dot);
+      span.appendChild(document.createTextNode(name + (i < r.palette.length - 1 ? "" : "")));
+      paletteEl.appendChild(span);
+    });
+  }
+
+  var toast = document.getElementById("quiz-toast");
+  var toastTimer;
+  function showToast(message){
+    toast.textContent = message;
+    toast.classList.add("is-visible");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove("is-visible"); }, 3200);
+  }
+
+  document.getElementById("quiz-guide-btn-1").addEventListener("click", function(){
+    showToast("Sent to your inbox \u2014 check your email \u{1F48C}");
+  });
+  document.getElementById("quiz-guide-btn-2").addEventListener("click", function(){
+    showToast("Sent to your inbox \u2014 check your email \u{1F48C}");
+  });
+  document.getElementById("quiz-era-btn").addEventListener("click", function(){
+    showToast("The \u201cWhat Era Are You In?\u201d quiz is coming soon.");
+  });
+
+})();
+</script>
+
+</body>
+</html>
