@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Era Are You In? Quiz | Nailed &amp; Inspired</title>
+<meta name="description" content="Discover the chapter of your life you're actually stepping into. Take the free 2-minute What Era Are You In? quiz.">
+<meta property="og:title" content="What Era Are You In? Quiz | Nailed & Inspired">
+<meta property="og:description" content="Discover the chapter of your life you're actually stepping into. Take the free 2-minute What Era Are You In? quiz.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+
+<header>
+  <a href="index.html" class="logo logo-flex"><img src="logo.png" alt="Nailed and Inspired logo" class="logo-mark">Nailed <span>&amp;</span> Inspired</a>
+  <nav>
+    <ul>
+      <li><a href="index.html#gap">The Shift</a></li>
+      <li><a href="index.html#journey">The Journey</a></li>
+      <li><a href="index.html#pain">For You</a></li>
+      <li><a href="blog.html">Journal</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+    </ul>
+  </nav>
+  <a href="index.html#join" class="nav-cta">Start Your Next Chapter</a>
+</header>
+
+<main>
+<section class="quiz-shell">
+  <div class="wrap">
+    <div id="quiz-app" aria-live="polite">
+
+      <!-- LANDING -->
+      <section class="quiz-stage quiz-landing is-active" data-panel="landing">
+        <div class="eyebrow-line"><span class="rule"></span><span>WHAT ERA ARE YOU IN?</span></div>
+        <h1>What chapter of your life are you actually in?</h1>
+        <p class="lede">Your life has seasons. Sometimes you're building. Sometimes you're becoming. Sometimes you're falling in love with life again. And sometimes you're finally ready to be seen. Take this 2-minute quiz to discover the era you're currently stepping into&mdash;and what this chapter may be asking of you. There are no right or wrong answers. Choose the answer that feels most like you right now.</p>
+        <button type="button" class="btn-primary quiz-start-btn" id="quiz-start-btn">Start The Quiz</button>
+        <p class="quiz-microcopy">2 minutes &middot; No right or wrong answers</p>
+      </section>
+
+      <!-- QUESTIONS -->
+      <section class="quiz-stage quiz-question-stage" data-panel="questions">
+        <div class="quiz-progress">
+          <div class="quiz-progress-label">
+            <span id="quiz-progress-text">01 / 08</span>
+          </div>
+          <div class="quiz-progress-track"><div class="quiz-progress-fill" id="quiz-progress-fill" style="width:12.5%;"></div></div>
+        </div>
+        <div class="quiz-question" id="quiz-question-mount">
+          <h2 id="quiz-question-text"></h2>
+          <ul class="quiz-options" id="quiz-options-list" role="group" aria-labelledby="quiz-question-text"></ul>
+        </div>
+        <div class="quiz-controls">
+          <button type="button" class="quiz-btn-back" id="quiz-back-btn">&larr; Back</button>
+          <button type="button" class="quiz-btn-next" id="quiz-next-btn" disabled>Next</button>
+        </div>
+      </section>
+
+      <!-- EMAIL CAPTURE -->
+      <section class="quiz-stage quiz-email" data-panel="email">
+        <h2 class="serif">Your era is ready.</h2>
+        <p class="lede">You've answered the questions. Now let's see what chapter you're actually stepping into. Enter your email to reveal your personalized era and receive your free Era Guide.</p>
+        <form class="quiz-email-form" id="quiz-email-form" novalidate>
+          <label class="quiz-email-label" for="quiz-email-input">EMAIL ADDRESS</label>
+          <input class="quiz-email-input" type="email" id="quiz-email-input" name="email" placeholder="you@email.com" autocomplete="email" required>
+          <div class="quiz-email-error" id="quiz-email-error" role="alert"></div>
+          <button type="submit" class="btn-primary quiz-email-submit" id="quiz-email-submit">Reveal My Era</button>
+        </form>
+        <p class="quiz-email-note">No spam. Just inspiration, identity, and your next chapter.</p>
+        <ul class="quiz-checklist">
+          <li><span class="check">&#10003;</span>Your current era</li>
+          <li><span class="check">&#10003;</span>What this chapter may be asking of you</li>
+          <li><span class="check">&#10003;</span>The energy of your next chapter</li>
+          <li><span class="check">&#10003;</span>What to lean into</li>
+          <li><span class="check">&#10003;</span>What to leave behind</li>
+          <li><span class="check">&#10003;</span>Your next step toward becoming her</li>
+        </ul>
+      </section>
+
+      <!-- RESULT -->
+      <section class="quiz-stage quiz-result" data-panel="result">
+        <div class="quiz-banner">
+          <h3>You're In Your Era.</h3>
+          <p>Your Era Guide just downloaded &mdash; check your downloads folder.</p>
+        </div>
+
+        <span class="quiz-result-kicker">YOUR ERA</span>
+        <h1 id="quiz-result-headline"></h1>
+        <div class="quiz-result-body" id="quiz-result-body"></div>
+        <p class="quiz-result-energy" id="quiz-result-energy"></p>
+
+        <div class="quiz-next-move">
+          <span class="kicker">YOUR NEXT MOVE</span>
+          <p id="quiz-result-nextmove"></p>
+        </div>
+
+        <button type="button" class="btn-primary quiz-result-cta" id="quiz-guide-btn-1">Enter Your Next Era</button>
+
+        <div class="quiz-universal">
+          <span class="quiz-result-kicker">YOUR ERA ISN&rsquo;T A LABEL.</span>
+          <h2 class="serif">It's a snapshot.</h2>
+          <p>A reflection of what you're craving, building, protecting, or becoming right now. And here's the beautiful part: you don't have to stay in one era forever.</p>
+          <ul class="quiz-life-list">
+            <li>Your Romantic Era can become your Creator Era.</li>
+            <li>Your Creator Era can become your Ambitious Era.</li>
+            <li>Your Ambitious Era can become your Balanced Era.</li>
+            <li>Your Balanced Era can become your Icon Era.</li>
+          </ul>
+          <p class="tail">You get to evolve. Your next chapter is yours to create.</p>
+          <button type="button" class="btn-primary quiz-result-cta" id="quiz-guide-btn-2">Download Your Free Era Guide</button>
+        </div>
+
+        <div class="quiz-universal">
+          <span class="quiz-result-kicker">YOUR NAILS WERE THE START.</span>
+          <h2 class="serif">You already discovered your Signature Nail Identity.</h2>
+          <p>Now you know the era you're stepping into. But there's another question: what happens when your outer world starts matching your inner transformation?</p>
+          <ul class="quiz-life-list">
+            <li>Your style.</li>
+            <li>Your space.</li>
+            <li>Your routines.</li>
+            <li>Your relationships.</li>
+            <li>Your goals.</li>
+            <li>Your standards.</li>
+            <li>Your life.</li>
+          </ul>
+          <p class="tail">This is where Nailed &amp; Inspired gets bigger than nails.</p>
+        </div>
+
+        <div class="quiz-era" id="quiz-crossover"></div>
+
+      </section>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="quiz-toast" id="quiz-toast" role="status"></div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo logo-flex"><img src="logo.png" alt="Nailed and Inspired logo" class="logo-mark">Nailed <span>&amp;</span> Inspired</a>
+        <p>Beauty is the beginning. Becoming is the mission.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html#gap">The Shift</a></li>
+        <li><a href="index.html#journey">The Journey</a></li>
+        <li><a href="index.html#pain">For You</a></li>
+        <li><a href="blog.html">Journal</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="index.html#join">Community</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">&copy; Nailed &amp; Inspired &mdash; part of the R3UP ecosystem.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ==========================================================
+     EXACT QUIZ CONTENT — wording, order, and count are fixed.
+     Do not rewrite, reorder, or shorten any question or answer.
+     ========================================================== */
+  var QUESTIONS = [
+    {
+      text: "If your life had a soundtrack right now, what would it feel like?",
+      options: [
+        { letter: "A", text: "Soft, romantic, dreamy, and a little cinematic." },
+        { letter: "B", text: "Focused, powerful, ambitious, and impossible to ignore." },
+        { letter: "C", text: "Calm, grounded, intentional, and at peace." },
+        { letter: "D", text: "Creative, unpredictable, expressive, and completely my own." },
+        { letter: "E", text: "Iconic. Like something bigger is about to happen." }
+      ]
+    },
+    {
+      text: "What are you craving most right now?",
+      options: [
+        { letter: "A", text: "Deeper connection, romance, beauty, and experiences that make life feel magical." },
+        { letter: "B", text: "Momentum, money, achievement, and proof that I can actually build what I envision." },
+        { letter: "C", text: "Peace, stability, balance, and a life that feels good\u2014not just looks good." },
+        { letter: "D", text: "Freedom to create, experiment, explore, and make something that feels uniquely mine." },
+        { letter: "E", text: "Expansion, visibility, recognition, and becoming the woman people remember." }
+      ]
+    },
+    {
+      text: "You suddenly have an entire day with no obligations. What sounds best?",
+      options: [
+        { letter: "A", text: "Getting dressed up, exploring somewhere beautiful, and letting the day unfold." },
+        { letter: "B", text: "Working on a goal I\u2019ve been serious about and making major progress." },
+        { letter: "C", text: "Taking care of myself, resetting my space, and enjoying a slow day." },
+        { letter: "D", text: "Creating something, trying something new, or following a random idea." },
+        { letter: "E", text: "Going somewhere I\u2019ve never been, dressing like the occasion matters, and making the day memorable." }
+      ]
+    },
+    {
+      text: "Which sentence feels most like your current mindset?",
+      options: [
+        { letter: "A", text: "I want to experience more of life\u2014not just accomplish more." },
+        { letter: "B", text: "I know I\u2019m capable of more, and I\u2019m ready to prove it." },
+        { letter: "C", text: "I don\u2019t want to sacrifice my peace just to say I succeeded." },
+        { letter: "D", text: "I don\u2019t want someone else\u2019s definition of success. I want to create my own." },
+        { letter: "E", text: "I can feel myself becoming the woman I\u2019ve always imagined." }
+      ]
+    },
+    {
+      text: "What are you most ready to leave behind?",
+      options: [
+        { letter: "A", text: "Being so guarded that I forget to actually enjoy my life." },
+        { letter: "B", text: "Playing small and waiting for permission." },
+        { letter: "C", text: "Constantly being busy and calling it progress." },
+        { letter: "D", text: "Following paths that don\u2019t actually feel like mine." },
+        { letter: "E", text: "The version of me that needed to be overlooked before she felt worthy of being seen." }
+      ]
+    },
+    {
+      text: "Your dream Saturday looks like\u2026",
+      options: [
+        { letter: "A", text: "Flowers, a beautiful outfit, great food, music, romance, and somewhere worth remembering." },
+        { letter: "B", text: "A productive morning, a big win, and celebrating progress afterward." },
+        { letter: "C", text: "A beautiful home, good food, self-care, and absolutely no rushing." },
+        { letter: "D", text: "A spontaneous adventure, creative project, new place, or idea I haven\u2019t tried before." },
+        { letter: "E", text: "Getting dressed like the main event and going somewhere that makes me feel alive." }
+      ]
+    },
+    {
+      text: "Which transformation feels most exciting?",
+      options: [
+        { letter: "A", text: "Becoming more open to love, beauty, connection, and pleasure." },
+        { letter: "B", text: "Becoming disciplined, successful, financially powerful, and undeniable." },
+        { letter: "C", text: "Becoming grounded enough to have ambition without losing myself." },
+        { letter: "D", text: "Becoming brave enough to create a life that doesn\u2019t look like everyone else\u2019s." },
+        { letter: "E", text: "Becoming so fully myself that I no longer need anyone else\u2019s permission to take up space." }
+      ]
+    },
+    {
+      text: "Complete this sentence: \u201cIn this next chapter, I want to\u2026\u201d",
+      options: [
+        { letter: "A", text: "\u2026fall in love with my life." },
+        { letter: "B", text: "\u2026build something bigger than I\u2019ve ever built before." },
+        { letter: "C", text: "\u2026create a life I don\u2019t need to escape from." },
+        { letter: "D", text: "\u2026make something only I could make." },
+        { letter: "E", text: "\u2026become unforgettable." }
+      ]
+    }
+  ];
+
+  var RESULTS = {
+    A: {
+      headline: "You\u2019re In Your Romantic Era",
+      body: [
+        "You\u2019re not necessarily looking for romance with another person.",
+        "You\u2019re looking for romance with your own life.",
+        "Beauty.", "Connection.", "Experiences.", "Pleasure.", "Presence.",
+        "You\u2019re entering a chapter where you want to stop rushing through your life and actually experience it.",
+        "Your next era is asking you to notice what makes you feel alive.",
+        "The restaurant you\u2019ve been wanting to try.",
+        "The outfit you\u2019ve been saving.",
+        "The trip you keep talking about.",
+        "The flowers.", "The music.", "The conversations.", "The moments.",
+        "Your Romantic Era isn\u2019t about escaping reality.",
+        "It\u2019s about making your reality feel worth being present for."
+      ],
+      energy: "\u201cI want to fall in love with my life.\u201d",
+      nextMove: "Where have I been postponing pleasure until I feel like I\u2019ve earned it?"
+    },
+    B: {
+      headline: "You\u2019re In Your Ambitious Era",
+      body: [
+        "You\u2019re done talking about what you could do.",
+        "You want results.",
+        "You\u2019re craving momentum, achievement, financial growth, mastery, and proof that you\u2019re capable of building the vision in your head.",
+        "This is the chapter where discipline becomes attractive.",
+        "Where your goals stop being ideas and start becoming commitments.",
+        "You don\u2019t need to become obsessed with productivity.",
+        "You need to become intentional about what deserves your energy.",
+        "Your ambition isn\u2019t the problem.",
+        "The question is what you\u2019re willing to build with it."
+      ],
+      energy: "\u201cI know I\u2019m capable of more.\u201d",
+      nextMove: "What would I accomplish if I stopped negotiating with the version of me that wants to stay comfortable?"
+    },
+    C: {
+      headline: "You\u2019re In Your Balanced Era",
+      body: [
+        "You\u2019re learning that success means very little if you don\u2019t actually enjoy the life you\u2019re building.",
+        "You\u2019re craving peace without giving up ambition.",
+        "Structure without rigidity.",
+        "Beauty without performance.",
+        "Success without burnout.",
+        "This is the chapter where you stop treating rest like something you have to earn.",
+        "Your life doesn\u2019t have to be chaotic to be meaningful.",
+        "You don\u2019t have to constantly prove you\u2019re moving forward.",
+        "Sometimes the next level is learning how to hold more without losing yourself."
+      ],
+      energy: "\u201cI can want more without sacrificing my peace.\u201d",
+      nextMove: "What would change if I stopped measuring my worth by how much I accomplish in a day?"
+    },
+    D: {
+      headline: "You\u2019re In Your Creator Era",
+      body: [
+        "You\u2019re becoming less interested in following the blueprint and more interested in creating your own.",
+        "You have ideas.", "Aesthetic.", "Opinions.", "Experiments.",
+        "Things you want to make, build, write, design, launch, explore, or bring into the world.",
+        "Your next chapter may not look conventional.",
+        "That\u2019s the point.",
+        "The Creator Era is about trusting your ability to make something that didn\u2019t exist before you decided to make it.",
+        "You don\u2019t need everyone to understand the vision before you begin."
+      ],
+      energy: "\u201cI want to make something only I could make.\u201d",
+      nextMove: "What idea keeps coming back because I haven\u2019t given myself permission to pursue it yet?"
+    },
+    E: {
+      headline: "You\u2019re In Your Icon Era",
+      body: [
+        "Something in you is done asking to be overlooked.",
+        "You\u2019re ready for visibility.", "Recognition.", "Expansion.", "Leadership.", "Presence.",
+        "Not because you need everyone to approve of you.",
+        "Because you\u2019re finally comfortable being fully seen.",
+        "Your Icon Era isn\u2019t about becoming famous.",
+        "It\u2019s about becoming unmistakable.",
+        "Your standards become clearer.",
+        "Your presence becomes stronger.",
+        "Your decisions become more intentional.",
+        "You stop waiting for someone else to validate the version of you you\u2019re becoming."
+      ],
+      energy: "\u201cI\u2019m becoming unforgettable.\u201d",
+      nextMove: "Where am I still waiting for permission to become visible?"
+    }
+  };
+
+  /* ==========================================================
+     SCORING — reusable, standalone. Q8 is the fixed tiebreaker.
+     ========================================================== */
+  function computeQuizResult(answers){
+    var counts = { A:0, B:0, C:0, D:0, E:0 };
+    answers.forEach(function(letter){ if (counts.hasOwnProperty(letter)) counts[letter]++; });
+    var maxCount = Math.max(counts.A, counts.B, counts.C, counts.D, counts.E);
+    var tied = Object.keys(counts).filter(function(letter){ return counts[letter] === maxCount; });
+    if (tied.length === 1) return tied[0];
+    return answers[7]; // Question 8 always breaks the tie
+  }
+
+  /* ==========================================================
+     LEAD SUBMISSION — clean placeholder abstraction, same shape
+     as the nail identity quiz's, tagged with a source_quiz field
+     so a real CRM/email platform can segment by quiz later.
+     No email provider is connected yet — swap the body of this
+     function for a real request when one is ready.
+     ========================================================== */
+  function submitQuizLead(payload){
+    return new Promise(function(resolve){
+      try{
+        var existing = JSON.parse(localStorage.getItem("nailed_era_quiz_leads") || "[]");
+        existing.push(payload);
+        localStorage.setItem("nailed_era_quiz_leads", JSON.stringify(existing));
+      }catch(e){ /* localStorage unavailable — fail silently, don't block the reveal */ }
+
+      /*
+      fetch("/api/quiz-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      */
+
+      resolve(payload);
+    });
+  }
+
+  /* Era Guide download — same real, no-backend-needed pattern
+     used for the Nail Identity Guide in quiz.html. */
+  function downloadGuide(){
+    var link = document.createElement("a");
+    link.href = "era-guide.pdf";
+    link.download = "The-Era-Guide.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  function claimEraGuide(){
+    downloadGuide();
+    showToast("Your Era Guide is downloading \u{1F48C}");
+  }
+
+  /* ==========================================================
+     APP STATE + WIRING
+     ========================================================== */
+  var answers = [];
+  var currentQuestion = 0;
+  var result = null;
+
+  var app = document.getElementById("quiz-app");
+  var stages = {
+    landing: app.querySelector('[data-panel="landing"]'),
+    questions: app.querySelector('[data-panel="questions"]'),
+    email: app.querySelector('[data-panel="email"]'),
+    result: app.querySelector('[data-panel="result"]')
+  };
+
+  function showStage(name){
+    Object.keys(stages).forEach(function(key){
+      stages[key].classList.toggle("is-active", key === name);
+    });
+    app.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function renderQuestion(){
+    var q = QUESTIONS[currentQuestion];
+    document.getElementById("quiz-question-text").textContent = q.text;
+    document.getElementById("quiz-progress-text").textContent =
+      String(currentQuestion + 1).padStart(2, "0") + " / 08";
+    document.getElementById("quiz-progress-fill").style.width =
+      (((currentQuestion + 1) / 8) * 100) + "%";
+
+    var list = document.getElementById("quiz-options-list");
+    list.innerHTML = "";
+    q.options.forEach(function(opt){
+      var li = document.createElement("li");
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "quiz-option";
+      btn.setAttribute("aria-pressed", answers[currentQuestion] === opt.letter ? "true" : "false");
+      btn.innerHTML = '<span class="quiz-option-letter">' + opt.letter + '.</span>' + opt.text;
+      btn.addEventListener("click", function(){
+        answers[currentQuestion] = opt.letter;
+        Array.prototype.forEach.call(list.querySelectorAll(".quiz-option"), function(b){
+          b.setAttribute("aria-pressed", "false");
+        });
+        btn.setAttribute("aria-pressed", "true");
+        nextBtn.disabled = false;
+      });
+      li.appendChild(btn);
+      list.appendChild(li);
+    });
+
+    backBtn.disabled = currentQuestion === 0;
+    nextBtn.disabled = !answers[currentQuestion];
+    nextBtn.textContent = currentQuestion === QUESTIONS.length - 1 ? "Continue" : "Next";
+  }
+
+  var startBtn = document.getElementById("quiz-start-btn");
+  var backBtn = document.getElementById("quiz-back-btn");
+  var nextBtn = document.getElementById("quiz-next-btn");
+
+  startBtn.addEventListener("click", function(){
+    currentQuestion = 0;
+    showStage("questions");
+    renderQuestion();
+  });
+
+  backBtn.addEventListener("click", function(){
+    if (currentQuestion === 0) return;
+    currentQuestion--;
+    renderQuestion();
+  });
+
+  nextBtn.addEventListener("click", function(){
+    if (!answers[currentQuestion]) return;
+    if (currentQuestion < QUESTIONS.length - 1){
+      currentQuestion++;
+      renderQuestion();
+    } else {
+      result = computeQuizResult(answers);
+      showStage("email");
+      document.getElementById("quiz-email-input").focus();
+    }
+  });
+
+  var emailForm = document.getElementById("quiz-email-form");
+  var emailInput = document.getElementById("quiz-email-input");
+  var emailError = document.getElementById("quiz-email-error");
+  var emailSubmit = document.getElementById("quiz-email-submit");
+
+  function isValidEmail(value){
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  }
+
+  emailForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    var email = emailInput.value.trim();
+    if (!isValidEmail(email)){
+      emailError.textContent = "Enter a valid email address.";
+      emailInput.focus();
+      return;
+    }
+    emailError.textContent = "";
+    emailSubmit.disabled = true;
+    emailSubmit.textContent = "Sending\u2026";
+
+    submitQuizLead({
+      email: email,
+      answers: answers.slice(),
+      result: result,
+      timestamp: new Date().toISOString(),
+      source_quiz: "what_era_are_you_in"
+    }).then(function(){
+      downloadGuide();
+      renderResult(result);
+      renderCrossover();
+      showStage("result");
+      emailSubmit.disabled = false;
+      emailSubmit.textContent = "Reveal My Era";
+    });
+  });
+
+  function renderResult(letter){
+    var r = RESULTS[letter];
+    document.getElementById("quiz-result-headline").textContent = r.headline;
+
+    var bodyEl = document.getElementById("quiz-result-body");
+    bodyEl.innerHTML = "";
+    r.body.forEach(function(paragraph){
+      var p = document.createElement("p");
+      p.textContent = paragraph;
+      bodyEl.appendChild(p);
+    });
+
+    document.getElementById("quiz-result-energy").textContent = r.energy;
+    document.getElementById("quiz-result-nextmove").textContent = r.nextMove;
+  }
+
+  /* Crossover block: different message depending on whether this
+     visitor has already taken the Signature Nail Identity Quiz
+     (detected via its localStorage leads, or a ?ref=nail-quiz
+     link like the one quiz.html now sends people over with). */
+  function cameFromNailQuiz(){
+    var params = new URLSearchParams(window.location.search);
+    if (params.get("ref") === "nail-quiz") return true;
+    try{
+      var leads = JSON.parse(localStorage.getItem("nailed_quiz_leads") || "[]");
+      return leads.length > 0;
+    }catch(e){ return false; }
+  }
+
+  function renderCrossover(){
+    var el = document.getElementById("quiz-crossover");
+    if (cameFromNailQuiz()){
+      el.innerHTML =
+        '<h3>You\u2019ve already discovered your Nail Identity.</h3>' +
+        '<p>Now you\u2019ve discovered your era. Your nails told us something about your energy. Your era tells us something about where you\u2019re going.</p>' +
+        '<a href="index.html" class="btn-ghost quiz-era-btn">Explore Nailed &amp; Inspired &rarr;</a>';
+    } else {
+      el.innerHTML =
+        '<h3>Start With Your Nail Identity</h3>' +
+        '<p>Before discovering your era, discover the aesthetic identity you\u2019re naturally drawn toward.</p>' +
+        '<a href="quiz.html" class="btn-ghost quiz-era-btn">Take The Signature Nail Identity Quiz &rarr;</a>';
+    }
+  }
+
+  var toast = document.getElementById("quiz-toast");
+  var toastTimer;
+  function showToast(message){
+    toast.textContent = message;
+    toast.classList.add("is-visible");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove("is-visible"); }, 3200);
+  }
+
+  document.getElementById("quiz-guide-btn-1").addEventListener("click", claimEraGuide);
+  document.getElementById("quiz-guide-btn-2").addEventListener("click", claimEraGuide);
+
+})();
+</script>
+
+</body>
+</html>
