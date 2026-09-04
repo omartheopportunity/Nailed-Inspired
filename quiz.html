@@ -86,7 +86,7 @@
       <section class="quiz-stage quiz-result" data-panel="result">
         <div class="quiz-banner">
           <h3>You're In. &#128077;&#127997;</h3>
-          <p>Check your inbox &mdash; we've sent your result and your free Signature Nail Identity Guide.</p>
+          <p>Your Signature Nail Identity Guide just downloaded &mdash; check your downloads folder.</p>
         </div>
 
         <span class="quiz-result-kicker">YOUR SIGNATURE NAIL IDENTITY</span>
@@ -126,8 +126,7 @@
         <div class="quiz-era">
           <h3>What Era Are You In?</h3>
           <p>Your nail identity tells you something about your energy. Now let's discover what chapter you're actually in.</p>
-          <button type="button" class="btn-ghost quiz-era-btn" id="quiz-era-btn">Take The &ldquo;What Era Are You In?&rdquo; Quiz &rarr;</button>
-          <span class="quiz-era-soon">Coming soon</span>
+          <a href="era-quiz.html?ref=nail-quiz" class="btn-ghost quiz-era-btn" id="quiz-era-btn">Take The &ldquo;What Era Are You In?&rdquo; Quiz &rarr;</a>
         </div>
       </section>
 
@@ -325,6 +324,19 @@
     "Experimental colors": "#8a6aa0", "Mixed aesthetics": "#9c3b34", "Transitional neutrals": "#c9c0b4"
   };
 
+  var GUIDE_PDF_URL = "signature-nail-identity-guide.pdf";
+
+  /* Triggers a real, immediate download of the guide — no backend
+     required, since it's a static file sitting in the repo. */
+  function downloadGuide(){
+    var link = document.createElement("a");
+    link.href = GUIDE_PDF_URL;
+    link.download = "Signature-Nail-Identity-Guide.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   /* ==========================================================
      SCORING — reusable, standalone. Q8 is the fixed tiebreaker.
      ========================================================== */
@@ -475,6 +487,7 @@
       result: result,
       timestamp: new Date().toISOString()
     }).then(function(){
+      downloadGuide();
       renderResult(result);
       showStage("result");
       emailSubmit.disabled = false;
@@ -521,13 +534,12 @@
   }
 
   document.getElementById("quiz-guide-btn-1").addEventListener("click", function(){
-    showToast("Sent to your inbox \u2014 check your email \u{1F48C}");
+    downloadGuide();
+    showToast("Your guide is downloading \u{1F48C}");
   });
   document.getElementById("quiz-guide-btn-2").addEventListener("click", function(){
-    showToast("Sent to your inbox \u2014 check your email \u{1F48C}");
-  });
-  document.getElementById("quiz-era-btn").addEventListener("click", function(){
-    showToast("The \u201cWhat Era Are You In?\u201d quiz is coming soon.");
+    downloadGuide();
+    showToast("Your guide is downloading \u{1F48C}");
   });
 
 })();
