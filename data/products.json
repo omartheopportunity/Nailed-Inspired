@@ -1,0 +1,74 @@
+{
+  "confidence-journal": {
+    "name": "The Confidence Journal",
+    "price": "$27",
+    "url": "https://YOUR-DOMAIN.com/products/confidence-journal",
+    "note": "Daily prompts for the woman building her next chapter."
+  },
+  "next-chapter-planner": {
+    "name": "Next Chapter Planner",
+    "price": "$34",
+    "url": "https://YOUR-DOMAIN.com/products/next-chapter-planner",
+    "note": "Plan the identity shift, not just the to-do list."
+  },
+  "room-finder-guide": {
+    "name": "The Room Finder Guide",
+    "price": "$19",
+    "url": "https://YOUR-DOMAIN.com/products/room-finder-guide",
+    "note": "How to find (and get invited into) better rooms."
+  },
+  "90-day-reset-workbook": {
+    "name": "The 90-Day Reset Digital Workbook",
+    "price": "$27",
+    "url": "https://YOUR-DOMAIN.com/products/90-day-reset-workbook",
+    "note": "Turn your vision for your next chapter into a practical plan."
+  },
+  "become-her-workbook": {
+    "name": "The Become Her Digital Workbook",
+    "price": "$27",
+    "url": "https://YOUR-DOMAIN.com/products/become-her-workbook",
+    "note": "Identify what needs to change and what your next environment needs to look like."
+  },
+  "front-yard-community": {
+    "name": "The Front Yard Community",
+    "price": "$25/mo",
+    "url": "https://front-yard-daily-roast.vercel.app",
+    "note": "A space built around meeting people, expanding your network, and better rooms."
+  },
+  "glow-up-workbook": {
+    "name": "The 90-Day Glow-Up Digital Workbook",
+    "price": "$27",
+    "url": "https://YOUR-DOMAIN.com/products/glow-up-workbook",
+    "note": "Map your identity, habits, standards, environment, and goals for the next 90 days."
+  },
+  "habits-identity-workbook": {
+    "name": "The 90-Day Habits & Identity Workbook",
+    "price": "$27",
+    "url": "https://YOUR-DOMAIN.com/products/habits-identity-workbook",
+    "note": "Build your next chapter one day at a time."
+  },
+  "new-era-reset": {
+    "name": "The New Era Digital Reset",
+    "price": "$27",
+    "url": "https://YOUR-DOMAIN.com/products/new-era-reset",
+    "note": "Clarify what you're leaving behind, what you're becoming, and what needs to change."
+  },
+  "identity-reset-workbook": {
+    "name": "The 90-Day Identity Reset Workbook",
+    "price": "$27",
+    "url": "https://YOUR-DOMAIN.com/products/identity-reset-workbook",
+    "note": "Define your identity, collect evidence, and build the environment that supports it."
+  },
+  "new-chapter-reset": {
+    "name": "The New Chapter Digital Reset",
+    "price": "$27",
+    "url": "https://YOUR-DOMAIN.com/products/new-chapter-reset",
+    "note": "Identify what you're ready to release, and what you're ready to build."
+  },
+  "become-her-90-workbook": {
+    "name": "The 90-Day Become Her Workbook",
+    "price": "$34",
+    "url": "https://YOUR-DOMAIN.com/products/become-her-90-workbook",
+    "note": "Turn your vision into a weekly plan — identity, habits, environment, confidence, goals."
+  }
+}
