@@ -364,13 +364,17 @@
         localStorage.setItem("nailed_quiz_leads", JSON.stringify(existing));
       }catch(e){ /* localStorage unavailable — fail silently, don't block the reveal */ }
 
-      /*
-      fetch("/api/quiz-lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
-      */
+      try{
+        var gform = new URLSearchParams();
+        gform.append("entry.2005620554", "Nail Quiz Lead — " + (payload.result || ""));
+        gform.append("entry.1045781291", payload.email || "");
+        fetch("https://docs.google.com/forms/d/e/1FAIpQLSc6SRImlvFKEAB2xCJ-hPvnhQFCDBeDdTNWFBCGxZAuYIMv5g/formResponse", {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: gform.toString()
+        });
+      }catch(e){ /* network unavailable — fail silently, don't block the reveal */ }
 
       resolve(payload);
     });
