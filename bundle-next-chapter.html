@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Next Chapter Bundle — Nailed &amp; Inspired</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#100C10;
+    --ink-2:#17111A;
+    --gold:#C9A868;
+    --gold-soft:#E4D3A6;
+    --plum:#5B3A6E;
+    --plum-soft:#8A6AA0;
+    --brick:#9C3B34;
+    --ivory:#F3ECE0;
+    --ivory-dim:#C9C0B4;
+    --line: rgba(201,168,104,0.25);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  body{
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:'Jost', sans-serif;
+    font-weight:300;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1, h2, h3, .serif{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    color:var(--ink);
+  }
+
+  a{color:inherit;}
+
+  :focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+  }
+
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    background:var(--ink);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:22px 32px;
+    max-width:1120px;
+    margin:0 auto;
+  }
+  .logo{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:1.4rem;
+    color:var(--ivory);
+    letter-spacing:0.02em;
+    text-decoration:none;
+  }
+  nav.links{
+    display:flex;
+    gap:34px;
+  }
+  nav.links a{
+    color:var(--ivory-dim);
+    text-decoration:none;
+    font-size:0.92rem;
+    letter-spacing:0.02em;
+    transition:color .2s ease;
+  }
+  nav.links a:hover{color:var(--gold-soft);}
+  .nav-cta{
+    background:var(--gold);
+    color:var(--ink);
+    padding:10px 22px;
+    border-radius:2px;
+    text-decoration:none;
+    font-size:0.88rem;
+    letter-spacing:0.02em;
+    white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--gold-soft);}
+  @media (max-width:760px){
+    nav.links{display:none;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
+    color:var(--ivory);
+    padding:96px 32px 110px;
+    text-align:center;
+  }
+  .hero .tag{
+    display:inline-block;
+    border:1px solid var(--line);
+    color:var(--gold-soft);
+    font-size:0.78rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    padding:6px 16px;
+    border-radius:20px;
+    margin-bottom:28px;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem, 5vw, 3.6rem);
+    line-height:1.15;
+    max-width:760px;
+    margin:0 auto 24px;
+  }
+  .hero p.sub{
+    color:var(--ivory-dim);
+    font-size:1.15rem;
+    max-width:560px;
+    margin:0 auto 40px;
+  }
+  .price-row{
+    display:flex;
+    align-items:baseline;
+    justify-content:center;
+    gap:14px;
+    margin-bottom:36px;
+  }
+  .price-old{
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.4rem;
+    color:var(--ivory-dim);
+    text-decoration:line-through;
+    text-decoration-color:var(--brick);
+  }
+  .price-new{
+    font-family:'Cormorant Garamond', serif;
+    font-size:2.6rem;
+    color:var(--gold-soft);
+  }
+  .btn-primary{
+    display:inline-block;
+    background:var(--gold);
+    color:var(--ink);
+    text-decoration:none;
+    padding:17px 40px;
+    font-size:1rem;
+    letter-spacing:0.02em;
+    border-radius:2px;
+    transition:background .2s ease, transform .15s ease;
+  }
+  .btn-primary:hover{background:var(--gold-soft); transform:translateY(-1px);}
+  .hero .note{
+    margin-top:18px;
+    font-size:0.85rem;
+    color:var(--ivory-dim);
+  }
+
+  /* ---------- Section shell ---------- */
+  section{
+    padding:90px 32px;
+  }
+  section.dim{background:#EEE6D6;}
+  .section-head{
+    text-align:center;
+    max-width:620px;
+    margin:0 auto 56px;
+  }
+  .section-head h2{
+    font-size:clamp(1.8rem, 3.4vw, 2.4rem);
+    margin-bottom:14px;
+  }
+  .section-head p{
+    color:#4A4248;
+    font-size:1.02rem;
+  }
+
+  /* ---------- Product cards (matches live .product-grid pattern) ---------- */
+  .product-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+    max-width:920px;
+    margin:0 auto;
+  }
+  @media (max-width:720px){
+    .product-grid{grid-template-columns:1fr;}
+  }
+  .product-card{
+    background:var(--ivory);
+    border:1px solid var(--line);
+    border-radius:3px;
+    padding:36px 32px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .product-card .num{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    color:var(--gold);
+    font-size:1rem;
+  }
+  .product-name{
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.55rem;
+    color:var(--ink);
+  }
+  .product-note{
+    color:#524A50;
+    font-size:0.96rem;
+    line-height:1.65;
+  }
+  .product-price{
+    margin-top:auto;
+    padding-top:14px;
+    border-top:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    font-size:0.92rem;
+    color:#6B6169;
+  }
+  .product-price .val{
+    text-decoration:line-through;
+    text-decoration-color:var(--brick);
+  }
+  .product-price .included{
+    color:var(--plum);
+    font-family:'Jost', sans-serif;
+    font-weight:500;
+  }
+
+  /* ---------- Pull quote ---------- */
+  .pullquote{
+    max-width:680px;
+    margin:0 auto;
+    text-align:center;
+  }
+  .pullquote p{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:clamp(1.5rem, 3vw, 1.9rem);
+    color:var(--plum);
+    line-height:1.45;
+  }
+
+  /* ---------- Steps ---------- */
+  .steps{
+    max-width:760px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:0;
+  }
+  .step{
+    display:flex;
+    gap:24px;
+    padding:26px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .step:last-child{border-bottom:none;}
+  .step .n{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:1.6rem;
+    color:var(--gold);
+    min-width:38px;
+  }
+  .step h3{
+    font-size:1.2rem;
+    margin-bottom:4px;
+  }
+  .step p{
+    color:#524A50;
+    font-size:0.96rem;
+  }
+
+  /* ---------- Final CTA band ---------- */
+  .cta-band{
+    background:var(--plum);
+    color:var(--ivory);
+    text-align:center;
+    padding:90px 32px;
+  }
+  .cta-band h2{
+    color:var(--ivory);
+    font-size:clamp(1.9rem, 3.6vw, 2.6rem);
+    max-width:600px;
+    margin:0 auto 18px;
+  }
+  .cta-band p.sub{
+    color:var(--gold-soft);
+    max-width:500px;
+    margin:0 auto 36px;
+    font-size:1.02rem;
+  }
+  .cta-band .btn-primary{
+    background:var(--gold);
+    color:var(--ink);
+  }
+  .cta-band .note{
+    margin-top:18px;
+    font-size:0.85rem;
+    color:var(--plum-soft);
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--ink);
+    color:var(--ivory-dim);
+    padding:48px 32px;
+  }
+  .footer-row{
+    max-width:1120px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+  }
+  footer nav{
+    display:flex;
+    gap:26px;
+    flex-wrap:wrap;
+  }
+  footer nav a{
+    color:var(--ivory-dim);
+    text-decoration:none;
+    font-size:0.88rem;
+  }
+  footer nav a:hover{color:var(--gold-soft);}
+  footer .copy{
+    font-size:0.8rem;
+    color:#5C5560;
+    width:100%;
+    text-align:center;
+    margin-top:32px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-row">
+    <a class="logo" href="index.html">Nailed and inspired</a>
+    <nav class="links">
+      <a href="index.html#gap">The Shift</a>
+      <a href="index.html#journey">The Journey</a>
+      <a href="index.html#pain">For You</a>
+      <a href="blog.html">Journal</a>
+      <a href="index.html#join">Community</a>
+    </nav>
+    <a class="nav-cta" href="#get">Start Your Next Chapter</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Bundle</span>
+    <h1>Everything you need to stop planning her and start becoming her.</h1>
+    <p class="sub">The 90-Day Reset and the Next Chapter Planner, together — the identity work and the tool that keeps it going, at one price.</p>
+    <div class="price-row">
+      <span class="price-old">$61</span>
+      <span class="price-new">$25</span>
+    </div>
+    <a class="btn-primary" href="#get" id="get">Get the Bundle — $25</a>
+    <p class="note">Instant digital download. Nothing to wait for.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What's inside</h2>
+      <p>Two tools built to work together — one gets you unstuck, the other keeps you moving.</p>
+    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <span class="num">One</span>
+        <span class="product-name">90-Day Reset Digital Workbook</span>
+        <p class="product-note">A guided path out of overwhelm — daily prompts and weekly resets built around the identity work that actually makes new habits stick, not just another routine you'll abandon by week two.</p>
+        <div class="product-price">
+          <span class="val">$27 alone</span>
+          <span class="included">Included</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <span class="num">Two</span>
+        <span class="product-name">Next Chapter Planner</span>
+        <p class="product-note">For the version of you who's already decided. Map your goals, your environment, and the next 90 days in one place — built for a woman who's done waiting for the right moment.</p>
+        <div class="product-price">
+          <span class="val">$34 alone</span>
+          <span class="included">Included</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dim">
+  <div class="wrap pullquote">
+    <p>"You already know you're meant for more. You don't need another course — you need a plan, and the version of yourself who actually follows it."</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How it works</h2>
+      <p>No courses to finish. No calls to book. Just open it and start.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="n">1</span>
+        <div>
+          <h3>Get instant access</h3>
+          <p>Both files land in your inbox the moment you check out — no waiting on shipping or scheduling.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="n">2</span>
+        <div>
+          <h3>Start your 90-day reset</h3>
+          <p>Work through the daily prompts at your pace. This is where the identity shift actually happens.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="n">3</span>
+        <div>
+          <h3>Build your next chapter alongside it</h3>
+          <p>Use the planner to turn what's shifting in the workbook into a real, dated plan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="wrap">
+    <h2>Her next chapter starts with one decision.</h2>
+    <p class="sub">$61 worth of tools, built for the same shift, for $25 today.</p>
+    <a class="btn-primary" href="#get">Get the Bundle — $25</a>
+    <p class="note">Instant digital download · No account needed</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-row">
+    <a class="logo" href="index.html" style="font-size:1.1rem;">Nailed and inspired</a>
+    <nav>
+      <a href="index.html#gap">The Shift</a>
+      <a href="index.html#journey">The Journey</a>
+      <a href="index.html#pain">For You</a>
+      <a href="blog.html">Journal</a>
+      <a href="index.html#join">Community</a>
+    </nav>
+    <div class="copy">© Nailed &amp; Inspired</div>
+  </div>
+</footer>
+
+</body>
+</html>
