@@ -350,11 +350,10 @@
   }
 
   /* ==========================================================
-     LEAD SUBMISSION — clean placeholder abstraction.
-     No email provider is connected yet. Swap the body of this
-     function for a real request (e.g. a serverless endpoint or
-     an email platform's API) when one is ready. Never put API
-     keys in this file — call your own backend, which holds them.
+     LEAD SUBMISSION — posts to the "Becoming Her ✨ - Nail Quiz"
+     Google Form (Best Email + Result fields). Phone is intentionally
+     not sent — that field must be set to NOT required on the form,
+     since this quiz never collects a phone number.
      ========================================================== */
   function submitQuizLead(payload){
     return new Promise(function(resolve){
@@ -366,9 +365,9 @@
 
       try{
         var gform = new URLSearchParams();
-        gform.append("entry.2005620554", "Nail Quiz Lead — " + (payload.result || ""));
-        gform.append("entry.1045781291", payload.email || "");
-        fetch("https://docs.google.com/forms/d/e/1FAIpQLSc6SRImlvFKEAB2xCJ-hPvnhQFCDBeDdTNWFBCGxZAuYIMv5g/formResponse", {
+        gform.append("entry.947869441", payload.email || "");
+        gform.append("entry.1324900448", payload.result || "");
+        fetch("https://docs.google.com/forms/d/e/1FAIpQLScaRp7c8Dq9OM95y7LGGnfcZgg_N36X4Lp9BXGxtTaBp4M3Mg/formResponse", {
           method: "POST",
           mode: "no-cors",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
