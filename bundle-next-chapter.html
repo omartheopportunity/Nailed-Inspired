@@ -18,7 +18,13 @@
     --brick:#9C3B34;
     --ivory:#F3ECE0;
     --ivory-dim:#C9C0B4;
-    --line: rgba(201,168,104,0.25);
+    --line: rgba(201,168,104,0.28);
+
+    /* fixed for legibility — same family, higher contrast on their backgrounds */
+    --on-ink-body:#D9D1C8;      /* body copy on --ink / --ink-2 */
+    --on-plum-body:#F1E6D4;     /* body copy on --plum */
+    --body-copy:#4A4248;        /* body copy on --ivory */
+    --muted-copy:#6E646C;       /* secondary copy on --ivory, AA-safe */
   }
 
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -77,7 +83,7 @@
     gap:34px;
   }
   nav.links a{
-    color:var(--ivory-dim);
+    color:var(--on-ink-body);
     text-decoration:none;
     font-size:0.92rem;
     letter-spacing:0.02em;
@@ -99,11 +105,11 @@
     nav.links{display:none;}
   }
 
-  /* ---------- Hero ---------- */
+  /* ---------- Hero / focal checkout section ---------- */
   .hero{
     background:linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
     color:var(--ivory);
-    padding:96px 32px 110px;
+    padding:72px 32px 88px;
     text-align:center;
   }
   .hero .tag{
@@ -115,37 +121,43 @@
     text-transform:uppercase;
     padding:6px 16px;
     border-radius:20px;
-    margin-bottom:28px;
+    margin-bottom:26px;
   }
   .hero h1{
-    font-size:clamp(2.4rem, 5vw, 3.6rem);
-    line-height:1.15;
-    max-width:760px;
-    margin:0 auto 24px;
+    font-size:clamp(1.9rem, 3.6vw, 2.6rem);
+    line-height:1.2;
+    max-width:640px;
+    margin:0 auto 36px;
+    color:var(--ivory);
   }
-  .hero p.sub{
-    color:var(--ivory-dim);
-    font-size:1.15rem;
+  .mockup-frame{
     max-width:560px;
     margin:0 auto 40px;
+  }
+  .mockup-frame img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:10px;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,0.55);
   }
   .price-row{
     display:flex;
     align-items:baseline;
     justify-content:center;
     gap:14px;
-    margin-bottom:36px;
+    margin-bottom:28px;
   }
   .price-old{
     font-family:'Cormorant Garamond', serif;
     font-size:1.4rem;
-    color:var(--ivory-dim);
+    color:var(--on-ink-body);
     text-decoration:line-through;
     text-decoration-color:var(--brick);
   }
   .price-new{
     font-family:'Cormorant Garamond', serif;
-    font-size:2.6rem;
+    font-size:2.8rem;
     color:var(--gold-soft);
   }
   .btn-primary{
@@ -153,39 +165,48 @@
     background:var(--gold);
     color:var(--ink);
     text-decoration:none;
-    padding:17px 40px;
-    font-size:1rem;
+    padding:19px 48px;
+    font-size:1.05rem;
+    font-weight:500;
     letter-spacing:0.02em;
     border-radius:2px;
     transition:background .2s ease, transform .15s ease;
   }
   .btn-primary:hover{background:var(--gold-soft); transform:translateY(-1px);}
   .hero .note{
-    margin-top:18px;
-    font-size:0.85rem;
-    color:var(--ivory-dim);
+    margin-top:16px;
+    font-size:0.88rem;
+    color:var(--on-ink-body);
   }
 
   /* ---------- Section shell ---------- */
   section{
-    padding:90px 32px;
+    padding:80px 32px;
   }
   section.dim{background:#EEE6D6;}
   .section-head{
     text-align:center;
     max-width:620px;
-    margin:0 auto 56px;
+    margin:0 auto 52px;
+  }
+  .section-head .kicker{
+    display:block;
+    font-size:0.8rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--plum);
+    margin-bottom:14px;
   }
   .section-head h2{
-    font-size:clamp(1.8rem, 3.4vw, 2.4rem);
+    font-size:clamp(1.7rem, 3.2vw, 2.2rem);
     margin-bottom:14px;
   }
   .section-head p{
-    color:#4A4248;
+    color:var(--body-copy);
     font-size:1.02rem;
   }
 
-  /* ---------- Product cards (matches live .product-grid pattern) ---------- */
+  /* ---------- Product cards ---------- */
   .product-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -200,7 +221,7 @@
     background:var(--ivory);
     border:1px solid var(--line);
     border-radius:3px;
-    padding:36px 32px;
+    padding:34px 30px;
     display:flex;
     flex-direction:column;
     gap:14px;
@@ -208,16 +229,16 @@
   .product-card .num{
     font-family:'Cormorant Garamond', serif;
     font-style:italic;
-    color:var(--gold);
+    color:var(--plum);
     font-size:1rem;
   }
   .product-name{
     font-family:'Cormorant Garamond', serif;
-    font-size:1.55rem;
+    font-size:1.5rem;
     color:var(--ink);
   }
   .product-note{
-    color:#524A50;
+    color:var(--body-copy);
     font-size:0.96rem;
     line-height:1.65;
   }
@@ -229,7 +250,7 @@
     justify-content:space-between;
     align-items:baseline;
     font-size:0.92rem;
-    color:#6B6169;
+    color:var(--muted-copy);
   }
   .product-price .val{
     text-decoration:line-through;
@@ -250,8 +271,8 @@
   .pullquote p{
     font-family:'Cormorant Garamond', serif;
     font-style:italic;
-    font-size:clamp(1.5rem, 3vw, 1.9rem);
-    color:var(--plum);
+    font-size:clamp(1.4rem, 2.8vw, 1.8rem);
+    color:var(--ink);
     line-height:1.45;
   }
 
@@ -266,7 +287,7 @@
   .step{
     display:flex;
     gap:24px;
-    padding:26px 0;
+    padding:24px 0;
     border-bottom:1px solid var(--line);
   }
   .step:last-child{border-bottom:none;}
@@ -280,9 +301,10 @@
   .step h3{
     font-size:1.2rem;
     margin-bottom:4px;
+    color:var(--ink);
   }
   .step p{
-    color:#524A50;
+    color:var(--body-copy);
     font-size:0.96rem;
   }
 
@@ -291,18 +313,18 @@
     background:var(--plum);
     color:var(--ivory);
     text-align:center;
-    padding:90px 32px;
+    padding:80px 32px;
   }
   .cta-band h2{
     color:var(--ivory);
-    font-size:clamp(1.9rem, 3.6vw, 2.6rem);
+    font-size:clamp(1.8rem, 3.4vw, 2.4rem);
     max-width:600px;
     margin:0 auto 18px;
   }
   .cta-band p.sub{
-    color:var(--gold-soft);
+    color:var(--on-plum-body);
     max-width:500px;
-    margin:0 auto 36px;
+    margin:0 auto 34px;
     font-size:1.02rem;
   }
   .cta-band .btn-primary{
@@ -310,16 +332,16 @@
     color:var(--ink);
   }
   .cta-band .note{
-    margin-top:18px;
+    margin-top:16px;
     font-size:0.85rem;
-    color:var(--plum-soft);
+    color:var(--on-plum-body);
   }
 
   /* ---------- Footer ---------- */
   footer{
     background:var(--ink);
-    color:var(--ivory-dim);
-    padding:48px 32px;
+    color:var(--on-ink-body);
+    padding:44px 32px;
   }
   .footer-row{
     max-width:1120px;
@@ -336,17 +358,17 @@
     flex-wrap:wrap;
   }
   footer nav a{
-    color:var(--ivory-dim);
+    color:var(--on-ink-body);
     text-decoration:none;
     font-size:0.88rem;
   }
   footer nav a:hover{color:var(--gold-soft);}
   footer .copy{
-    font-size:0.8rem;
-    color:#5C5560;
+    font-size:0.82rem;
+    color:var(--ivory-dim);
     width:100%;
     text-align:center;
-    margin-top:32px;
+    margin-top:30px;
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -366,29 +388,34 @@
       <a href="blog.html">Journal</a>
       <a href="index.html#join">Community</a>
     </nav>
-    <a class="nav-cta" href="#get">Start Your Next Chapter</a>
+    <a class="nav-cta" href="https://buy.stripe.com/7sY7sKewd73Q5vp1CCg3609">Start Your Next Chapter</a>
   </div>
 </header>
 
+<!-- FOCAL HERO: mockup + price + CTA, everything else is validation below -->
 <section class="hero">
   <div class="wrap">
     <span class="tag">Bundle</span>
     <h1>Everything you need to stop planning her and start becoming her.</h1>
-    <p class="sub">The 90-Day Reset and the Next Chapter Planner, together — the identity work and the tool that keeps it going, at one price.</p>
+    <div class="mockup-frame">
+      <img src="bundle-mockup.png" alt="The Next Chapter Bundle — 90-Day Reset Digital Workbook and Next Chapter Planner">
+    </div>
     <div class="price-row">
       <span class="price-old">$61</span>
       <span class="price-new">$25</span>
     </div>
-    <a class="btn-primary" href="#get" id="get">Get the Bundle — $25</a>
+    <a class="btn-primary" href="https://buy.stripe.com/7sY7sKewd73Q5vp1CCg3609">Get the Bundle — $25</a>
     <p class="note">Instant digital download. Nothing to wait for.</p>
   </div>
 </section>
 
+<!-- everything below is validation for the decision already offered above -->
 <section>
   <div class="wrap">
     <div class="section-head">
-      <h2>What's inside</h2>
-      <p>Two tools built to work together — one gets you unstuck, the other keeps you moving.</p>
+      <span class="kicker">What's inside</span>
+      <h2>Two tools built to work together</h2>
+      <p>One gets you unstuck, the other keeps you moving.</p>
     </div>
     <div class="product-grid">
       <div class="product-card">
@@ -422,8 +449,9 @@
 <section>
   <div class="wrap">
     <div class="section-head">
-      <h2>How it works</h2>
-      <p>No courses to finish. No calls to book. Just open it and start.</p>
+      <span class="kicker">How it works</span>
+      <h2>No courses to finish. No calls to book.</h2>
+      <p>Just open it and start.</p>
     </div>
     <div class="steps">
       <div class="step">
@@ -455,7 +483,7 @@
   <div class="wrap">
     <h2>Her next chapter starts with one decision.</h2>
     <p class="sub">$61 worth of tools, built for the same shift, for $25 today.</p>
-    <a class="btn-primary" href="#get">Get the Bundle — $25</a>
+    <a class="btn-primary" href="https://buy.stripe.com/7sY7sKewd73Q5vp1CCg3609">Get the Bundle — $25</a>
     <p class="note">Instant digital download · No account needed</p>
   </div>
 </div>
