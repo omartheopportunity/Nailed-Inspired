@@ -154,6 +154,13 @@ document.addEventListener("DOMContentLoaded", function(){
 '''
 
 
+# Vercel Web Analytics initialization script
+ANALYTICS_HEAD = '''<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>'''
+
+ANALYTICS_BODY = '''<script type="module" src="analytics.js"></script>'''
+
 def head(title, meta):
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -165,6 +172,7 @@ def head(title, meta):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+{ANALYTICS_HEAD}
 </head>
 <body>
 <div class="grain"></div>
@@ -221,6 +229,7 @@ def build_post_page(post, products):
 </section>
 
 {SHARE_JS}{FOOTER}
+{ANALYTICS_BODY}
 </body>
 </html>'''
 
@@ -269,6 +278,7 @@ def build_index(posts):
 </section>
 
 {FOOTER}
+{ANALYTICS_BODY}
 </body>
 </html>'''
 
