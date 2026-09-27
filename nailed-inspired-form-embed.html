@@ -1,0 +1,120 @@
+<!-- ============================================================
+  NAILED & INSPIRED — EMAIL OPT-IN (Google Form embed, styled wrapper)
+  Drop this whole block into your post-<slug>.html template wherever
+  the old quiz sat. No script setup needed — this uses your real
+  "Becoming Her" Google Form, which is already wired to a Sheet.
+
+  ONE THING TO DO IN THE FORM ITSELF (2 min, optional but recommended):
+  In the Form editor, tap the palette icon (top left, next to the
+  bars icon) and set the theme color to a plum/purple close to
+  #3B1F2B — Google Forms only lets us skin the *outside* here since
+  the form itself lives on Google's domain, so matching its internal
+  accent color there is what makes the two halves feel like one brand.
+============================================================= -->
+
+<div class="ni-form-wrap">
+  <div class="ni-form-wrap__mark" aria-hidden="true">
+    <svg viewBox="0 0 48 48" width="30" height="30">
+      <circle cx="24" cy="24" r="23" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M24 14c-3.2 4-3.2 8 0 12M24 14c3.2 4 3.2 8 0 12" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    </svg>
+  </div>
+  <p class="ni-form-wrap__eyebrow">Nailing your look is step one.</p>
+  <h3 class="ni-form-wrap__headline">Become Her — join the list</h3>
+  <p class="ni-form-wrap__sub">Weekly reset texts, confidence tips &amp; women-only events. Takes ten seconds.</p>
+
+  <div class="ni-form-wrap__frame">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLScaRp7c8Dq9OM95y7LGGnfcZgg_N36X4Lp9BXGxtTaBp4M3Mg/viewform?embedded=true"
+      width="100%"
+      height="480"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      title="Becoming Her — email signup"
+    >Loading…</iframe>
+  </div>
+</div>
+
+<style>
+  .ni-form-wrap {
+    --ni-plum: #3B1F2B;
+    --ni-plum-deep: #241318;
+    --ni-blush: #F4D9D0;
+    --ni-cream: #FBF3EC;
+    --ni-gold: #B98B4E;
+    --ni-rose: #C97B84;
+
+    max-width: 640px;
+    margin: 2.5rem auto;
+    padding: 2rem 1.5rem 1.5rem;
+    background: var(--ni-cream);
+    border: 1px solid rgba(59, 31, 43, 0.14);
+    border-radius: 2px;
+    position: relative;
+    font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+    color: var(--ni-plum-deep);
+    text-align: center;
+  }
+
+  .ni-form-wrap::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 1px solid rgba(185, 139, 78, 0.35);
+    border-radius: 1px;
+    pointer-events: none;
+  }
+
+  .ni-form-wrap__mark {
+    color: var(--ni-gold);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .ni-form-wrap__eyebrow {
+    margin: 0 0 0.4rem;
+    font-size: 0.82rem;
+    color: var(--ni-rose);
+    font-style: italic;
+  }
+
+  .ni-form-wrap__headline {
+    margin: 0 0 0.5rem;
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: var(--ni-plum);
+  }
+
+  .ni-form-wrap__sub {
+    margin: 0 auto 1.5rem;
+    max-width: 38ch;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(36, 19, 24, 0.75);
+  }
+
+  .ni-form-wrap__frame {
+    background: #fff;
+    border: 1px solid rgba(59, 31, 43, 0.16);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .ni-form-wrap__frame iframe {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+
+  @media (max-width: 480px) {
+    .ni-form-wrap__frame iframe { height: 560px; }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
