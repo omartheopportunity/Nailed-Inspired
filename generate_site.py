@@ -105,6 +105,7 @@ HEADER = '''<header>
       <li><a href="index.html#journey">The Journey</a></li>
       <li><a href="index.html#pain">For You</a></li>
       <li><a href="blog.html">Journal</a></li>
+      <li><a href="products.html">Products</a></li>
       <li><a href="quiz.html">Quiz</a></li>
     </ul>
   </nav>
@@ -124,8 +125,9 @@ FOOTER = '''<footer>
         <li><a href="index.html#journey">The Journey</a></li>
         <li><a href="index.html#pain">For You</a></li>
         <li><a href="blog.html">Journal</a></li>
+        <li><a href="products.html">Products</a></li>
         <li><a href="quiz.html">Quiz</a></li>
-        <li><a href="index.html#join">Community</a></li>
+        <li><a href="community.html">Community</a></li>
       </ul>
     </div>
     <div class="footer-bottom">&copy; Nailed &amp; Inspired &mdash; part of the R3UP ecosystem.</div>
