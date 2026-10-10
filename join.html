@@ -123,16 +123,99 @@
     color: var(--ni-plum);
   }
 
+
+  /* Offer header: products + exclusive offers */
+  .ni-offer {
+    background: var(--ni-plum-deep);
+    border-radius: 2px;
+    padding: 1.6rem 1.25rem 1.5rem;
+    margin: 0 0 1.5rem;
+    color: var(--ni-cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .ni-offer::before {
+    content: "";
+    position: absolute; inset: 8px;
+    border: 1px solid rgba(185, 139, 78, 0.45);
+    pointer-events: none;
+  }
+  .ni-offer__eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ni-gold);
+    margin: 0 0 0.4rem;
+  }
+  .ni-offer__headline {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.6rem, 5vw, 2.1rem);
+    line-height: 1.15;
+    margin: 0 0 1.1rem;
+    color: var(--ni-cream);
+  }
+  .ni-offer__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  .ni-offer__item { margin: 0; }
+  .ni-offer__item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 794 / 900;
+    object-fit: cover;
+    border-radius: 2px;
+  }
+  .ni-offer__item figcaption {
+    margin-top: 0.55rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ni-blush);
+  }
+  .ni-offer__item figcaption span {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: none;
+    color: rgba(251, 243, 236, 0.7);
+    margin-top: 2px;
+  }
+  .ni-offer__note {
+    margin: 1rem 0 0;
+    font-size: 0.85rem;
+    color: rgba(251, 243, 236, 0.85);
+  }
+
   @media (max-width: 480px) {
     .ni-form-wrap { padding: 2rem 1.1rem 1.5rem; }
     .ni-form-wrap__frame iframe { height: 560px; }
   }
 </style>
+<script src="tracking.js" defer></script>
 </head>
 <body>
 
 <div class="ni-page">
   <p class="ni-page__wordmark">Nailed &amp; Inspired</p>
+
+  <div class="ni-offer">
+    <p class="ni-offer__eyebrow">For list members only</p>
+    <h2 class="ni-offer__headline">Exclusive offers &amp; samples</h2>
+    <div class="ni-offer__grid">
+      <figure class="ni-offer__item">
+        <img src="offer-beauty-rzn.jpg" alt="RZN Beauty Hair Conditioner and Body Wash">
+        <figcaption>The Beauty Ritual<span>RZN conditioner &amp; body wash</span></figcaption>
+      </figure>
+      <figure class="ni-offer__item">
+        <img src="offer-coffee-elevate.jpg" alt="Elevate luxury functional coffee, Black and Latte">
+        <figcaption>The Morning Ritual<span>Elevate coffee, Black &amp; Latte</span></figcaption>
+      </figure>
+    </div>
+    <p class="ni-offer__note">Join below and be first in line for member pricing and samples.</p>
+  </div>
 
   <div class="ni-form-wrap">
     <div class="ni-form-wrap__mark" aria-hidden="true">
