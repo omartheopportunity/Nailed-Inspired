@@ -228,7 +228,7 @@
   .footer-grid{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;}
   footer .logo{margin-bottom:10px;}
   footer p{font-size:0.85rem;color:var(--ivory-dim);max-width:34ch;}
-  .footer-links{display:flex;gap:26px;list-style:none;}
+  .footer-links{display:flex;flex-wrap:wrap;gap:14px 26px;list-style:none;}
   .footer-links a{font-size:0.8rem;color:var(--ivory-dim);letter-spacing:.05em;}
   .footer-links a:hover{color:var(--gold);}
   .footer-bottom{margin-top:44px;font-size:0.72rem;color:rgba(201,192,180,0.4);letter-spacing:.06em;}
