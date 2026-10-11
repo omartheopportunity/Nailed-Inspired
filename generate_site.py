@@ -38,7 +38,7 @@ import os
 import re
 import html as html_lib
 
-DOMAIN = "https://YOUR-DOMAIN.com"   # <-- set this once you know the live path
+DOMAIN = "https://nailed-and-inspired.vercel.app"
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
@@ -167,6 +167,7 @@ def head(title, meta):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script src="tracking.js" defer></script>
 </head>
 <body>
 <div class="grain"></div>

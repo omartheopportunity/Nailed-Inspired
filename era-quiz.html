@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script src="tracking.js" defer></script>
 </head>
 <body>
 <div class="grain"></div>
@@ -356,8 +357,8 @@
      LEAD SUBMISSION — clean placeholder abstraction, same shape
      as the nail identity quiz's, tagged with a source_quiz field
      so a real CRM/email platform can segment by quiz later.
-     No email provider is connected yet — swap the body of this
-     function for a real request when one is ready.
+     Sends to the "Becoming Her - Nailed & Inspired List" Google Form
+     owned by omarthehub (Best Email + Quiz result fields).
      ========================================================== */
   function submitQuizLead(payload){
     return new Promise(function(resolve){
@@ -367,13 +368,22 @@
         localStorage.setItem("nailed_era_quiz_leads", JSON.stringify(existing));
       }catch(e){ /* localStorage unavailable — fail silently, don't block the reveal */ }
 
-      /*
-      fetch("/api/quiz-lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
-      */
+      try{
+        var src = "";
+        try{
+          var u = JSON.parse(sessionStorage.getItem("ni_utm") || "{}");
+          if (u.utm_campaign || u.utm_content) src = " | from: " + (u.utm_campaign || "") + " " + (u.utm_content || "");
+        }catch(e){}
+        var gform = new URLSearchParams();
+        gform.append("entry.1825262067", payload.email || "");
+        gform.append("entry.866244110", "Era quiz: " + (payload.result || "") + src);
+        fetch("https://docs.google.com/forms/d/e/1FAIpQLScBecL9eSqa8flRzst3Z_YT2gsx0buz-Aaisvs7qgEKj3TOPA/formResponse", {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: gform.toString()
+        });
+      }catch(e){ /* network unavailable — fail silently, don't block the reveal */ }
 
       resolve(payload);
     });
