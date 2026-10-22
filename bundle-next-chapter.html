@@ -4,413 +4,180 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Next Chapter Bundle — Nailed &amp; Inspired</title>
+<meta name="description" content="The 90-Day Reset Workbook + Next Chapter Planner. Reset your habits, confidence, goals, environment and identity before 2027. $61 value, $25 today.">
+<meta property="og:title" content="The Next Chapter Bundle — $25">
+<meta property="og:description" content="Stop planning her. Start becoming her. 90-Day Reset Workbook + Next Chapter Planner.">
+<meta property="og:image" content="https://nailed-and-inspired.vercel.app/bundle-mockup.png">
+<link rel="preload" as="image" href="bundle-mockup.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- ============ TIKTOK PIXEL ============
+     Paste the base code from TikTok Ads Manager > Tools > Events > Web Events
+     (your pixel's "Install manually" snippet) right here, replacing this comment.
+     The event calls further down only fire once that snippet is present. -->
+
 <style>
   :root{
-    --ink:#100C10;
-    --ink-2:#17111A;
-    --gold:#C9A868;
-    --gold-soft:#E4D3A6;
-    --plum:#5B3A6E;
-    --plum-soft:#8A6AA0;
-    --brick:#9C3B34;
-    --ivory:#F3ECE0;
-    --ivory-dim:#C9C0B4;
-    --line: rgba(201,168,104,0.28);
+    --ink:#100C10; --ink-2:#17111A; --gold:#C9A868; --gold-soft:#E4D3A6;
+    --plum:#5B3A6E; --brick:#9C3B34; --ivory:#F3ECE0; --ivory-dim:#C9C0B4;
+    --line:rgba(201,168,104,0.28);
+    --on-ink-body:#D9D1C8; --on-plum-body:#F1E6D4; --body-copy:#4A4248; --muted-copy:#6E646C;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--ivory);color:var(--ink);font-family:'Jost',sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--ink)}
+  a{color:inherit}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 
-    /* fixed for legibility — same family, higher contrast on their backgrounds */
-    --on-ink-body:#D9D1C8;      /* body copy on --ink / --ink-2 */
-    --on-plum-body:#F1E6D4;     /* body copy on --plum */
-    --body-copy:#4A4248;        /* body copy on --ivory */
-    --muted-copy:#6E646C;       /* secondary copy on --ivory, AA-safe */
-  }
+  /* header: logo only — no exits off the page */
+  header{background:var(--ink);border-bottom:1px solid var(--line)}
+  .nav-row{display:flex;align-items:center;justify-content:center;padding:14px 24px}
+  .logo{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:var(--ivory);letter-spacing:.02em}
 
-  *{box-sizing:border-box; margin:0; padding:0;}
+  /* hero */
+  .hero{background:linear-gradient(180deg,var(--ink) 0%,var(--ink-2) 100%);color:var(--ivory);padding:28px 20px 48px;text-align:center}
+  .tag{display:inline-block;border:1px solid var(--line);color:var(--gold-soft);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:16px}
+  .hero h1{font-size:clamp(1.85rem,6.6vw,2.7rem);line-height:1.12;max-width:640px;margin:0 auto 12px;color:var(--ivory)}
+  .hero h1 em{color:var(--gold-soft)}
+  .hero .lede{max-width:520px;margin:0 auto 18px;color:var(--on-ink-body);font-size:1rem}
+  .mockup-frame{max-width:520px;margin:0 auto 18px}
+  .mockup-frame img{width:100%;height:auto;display:block;border-radius:10px;box-shadow:0 30px 60px -20px rgba(0,0,0,.55);aspect-ratio:4/3}
+  .price-row{display:flex;align-items:baseline;justify-content:center;gap:12px;margin-bottom:6px}
+  .price-old{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--on-ink-body);text-decoration:line-through;text-decoration-color:var(--brick)}
+  .price-new{font-family:'Cormorant Garamond',serif;font-size:2.8rem;line-height:1;color:var(--gold-soft)}
+  .save{display:inline-block;background:rgba(201,168,104,.15);color:var(--gold-soft);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:3px;margin-bottom:18px}
+  .btn-primary{display:block;width:100%;max-width:420px;margin:0 auto;background:var(--gold);color:var(--ink);text-decoration:none;padding:18px 24px;font-size:1.08rem;font-weight:500;letter-spacing:.02em;border-radius:4px;transition:background .2s ease,transform .15s ease}
+  .btn-primary:hover{background:var(--gold-soft);transform:translateY(-1px)}
+  .trust{margin-top:14px;font-size:.84rem;color:var(--on-ink-body);display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px}
+  .trust span::before{content:"✓ ";color:var(--gold)}
 
-  body{
-    background:var(--ivory);
-    color:var(--ink);
-    font-family:'Jost', sans-serif;
-    font-weight:300;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
+  section{padding:64px 20px}
+  section.dim{background:#EEE6D6}
+  .section-head{text-align:center;max-width:620px;margin:0 auto 36px}
+  .kicker{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--plum);margin-bottom:12px}
+  .section-head h2{font-size:clamp(1.7rem,5.4vw,2.2rem);line-height:1.2;margin-bottom:10px}
+  .section-head p{color:var(--body-copy);font-size:1.02rem}
 
-  h1, h2, h3, .serif{
-    font-family:'Cormorant Garamond', serif;
-    font-weight:500;
-    color:var(--ink);
-  }
+  /* 5 pillars (from the pin that performed) */
+  .pillars{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+  .pillar{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:6px;padding:18px 20px}
+  .pillar .n{flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--plum)}
+  .pillar h3{font-family:'Jost',sans-serif;font-weight:500;font-size:.92rem;letter-spacing:.1em;text-transform:uppercase}
+  .pillar p{color:var(--body-copy);font-size:.96rem}
 
-  a{color:inherit;}
+  /* for you */
+  .foryou{max-width:640px;margin:0 auto;list-style:none;display:flex;flex-direction:column;gap:12px}
+  .foryou li{font-family:'Cormorant Garamond',serif;font-size:1.35rem;line-height:1.35;padding-left:28px;position:relative}
+  .foryou li::before{content:"→";position:absolute;left:0;color:var(--gold)}
 
-  :focus-visible{
-    outline:2px solid var(--gold);
-    outline-offset:3px;
-  }
+  /* products */
+  .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:920px;margin:0 auto}
+  @media (max-width:720px){.product-grid{grid-template-columns:1fr}}
+  .product-card{background:var(--ivory);border:1px solid var(--line);border-radius:4px;padding:28px 24px;display:flex;flex-direction:column;gap:12px}
+  .product-card .num{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--plum)}
+  .product-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;line-height:1.2}
+  .product-note{color:var(--body-copy);font-size:.96rem;line-height:1.65}
+  .product-price{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:.92rem;color:var(--muted-copy)}
+  .product-price .val{text-decoration:line-through;text-decoration-color:var(--brick)}
+  .product-price .included{color:var(--plum);font-weight:500}
+  .stack{max-width:920px;margin:20px auto 0;background:var(--ink);color:var(--ivory);border-radius:4px;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+  .stack s{color:var(--ivory-dim)}
+  .stack b{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.8rem;color:var(--gold-soft)}
+  .guarantee{max-width:920px;margin:20px auto 0;border:1.5px solid var(--gold);border-radius:6px;padding:26px 24px;display:flex;gap:20px;align-items:flex-start;background:#fff}
+  .guarantee .seal{flex:none;width:72px;height:72px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;text-align:center;font-family:'Cormorant Garamond',serif;font-size:.95rem;line-height:1.05;font-weight:600}
+  .guarantee h3{font-size:1.45rem;line-height:1.2;margin-bottom:6px}
+  .guarantee p{color:var(--body-copy);font-size:.96rem}
+  @media (max-width:600px){.guarantee{flex-direction:column;align-items:center;text-align:center}}
 
-  .wrap{
-    max-width:1120px;
-    margin:0 auto;
-    padding:0 32px;
-  }
+  .pullquote{max-width:680px;margin:0 auto;text-align:center}
+  .pullquote p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.4rem,4.6vw,1.8rem);line-height:1.45}
 
-  /* ---------- Header ---------- */
-  header{
-    background:var(--ink);
-    border-bottom:1px solid var(--line);
-  }
-  .nav-row{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:22px 32px;
-    max-width:1120px;
-    margin:0 auto;
-  }
-  .logo{
-    font-family:'Cormorant Garamond', serif;
-    font-style:italic;
-    font-size:1.4rem;
-    color:var(--ivory);
-    letter-spacing:0.02em;
-    text-decoration:none;
-  }
-  nav.links{
-    display:flex;
-    gap:34px;
-  }
-  nav.links a{
-    color:var(--on-ink-body);
-    text-decoration:none;
-    font-size:0.92rem;
-    letter-spacing:0.02em;
-    transition:color .2s ease;
-  }
-  nav.links a:hover{color:var(--gold-soft);}
-  .nav-cta{
-    background:var(--gold);
-    color:var(--ink);
-    padding:10px 22px;
-    border-radius:2px;
-    text-decoration:none;
-    font-size:0.88rem;
-    letter-spacing:0.02em;
-    white-space:nowrap;
-  }
-  .nav-cta:hover{background:var(--gold-soft);}
-  @media (max-width:760px){
-    nav.links{display:none;}
-  }
+  .steps{max-width:760px;margin:0 auto}
+  .step{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:none}
+  .step .n{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.6rem;color:var(--gold);min-width:30px}
+  .step h3{font-size:1.2rem;margin-bottom:2px}
+  .step p{color:var(--body-copy);font-size:.96rem}
 
-  /* ---------- Hero / focal checkout section ---------- */
-  .hero{
-    background:linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
-    color:var(--ivory);
-    padding:72px 32px 88px;
-    text-align:center;
-  }
-  .hero .tag{
-    display:inline-block;
-    border:1px solid var(--line);
-    color:var(--gold-soft);
-    font-size:0.78rem;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    padding:6px 16px;
-    border-radius:20px;
-    margin-bottom:26px;
-  }
-  .hero h1{
-    font-size:clamp(1.9rem, 3.6vw, 2.6rem);
-    line-height:1.2;
-    max-width:640px;
-    margin:0 auto 36px;
-    color:var(--ivory);
-  }
-  .mockup-frame{
-    max-width:560px;
-    margin:0 auto 40px;
-  }
-  .mockup-frame img{
-    width:100%;
-    height:auto;
-    display:block;
-    border-radius:10px;
-    box-shadow:0 30px 60px -20px rgba(0,0,0,0.55);
-  }
-  .price-row{
-    display:flex;
-    align-items:baseline;
-    justify-content:center;
-    gap:14px;
-    margin-bottom:28px;
-  }
-  .price-old{
-    font-family:'Cormorant Garamond', serif;
-    font-size:1.4rem;
-    color:var(--on-ink-body);
-    text-decoration:line-through;
-    text-decoration-color:var(--brick);
-  }
-  .price-new{
-    font-family:'Cormorant Garamond', serif;
-    font-size:2.8rem;
-    color:var(--gold-soft);
-  }
-  .btn-primary{
-    display:inline-block;
-    background:var(--gold);
-    color:var(--ink);
-    text-decoration:none;
-    padding:19px 48px;
-    font-size:1.05rem;
-    font-weight:500;
-    letter-spacing:0.02em;
-    border-radius:2px;
-    transition:background .2s ease, transform .15s ease;
-  }
-  .btn-primary:hover{background:var(--gold-soft); transform:translateY(-1px);}
-  .hero .note{
-    margin-top:16px;
-    font-size:0.88rem;
-    color:var(--on-ink-body);
-  }
+  .faq{max-width:700px;margin:0 auto}
+  .faq details{border-bottom:1px solid var(--line);padding:16px 0}
+  .faq summary{cursor:pointer;font-family:'Cormorant Garamond',serif;font-size:1.25rem;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  .faq summary::after{content:"+";color:var(--gold);font-family:'Jost',sans-serif}
+  .faq details[open] summary::after{content:"–"}
+  .faq p{color:var(--body-copy);margin-top:8px;font-size:.96rem}
 
-  /* ---------- Section shell ---------- */
-  section{
-    padding:80px 32px;
-  }
-  section.dim{background:#EEE6D6;}
-  .section-head{
-    text-align:center;
-    max-width:620px;
-    margin:0 auto 52px;
-  }
-  .section-head .kicker{
-    display:block;
-    font-size:0.8rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--plum);
-    margin-bottom:14px;
-  }
-  .section-head h2{
-    font-size:clamp(1.7rem, 3.2vw, 2.2rem);
-    margin-bottom:14px;
-  }
-  .section-head p{
-    color:var(--body-copy);
-    font-size:1.02rem;
-  }
+  .cta-band{background:var(--plum);color:var(--ivory);text-align:center;padding:64px 20px 72px}
+  .cta-band h2{color:var(--ivory);font-size:clamp(1.8rem,6vw,2.4rem);line-height:1.15;max-width:600px;margin:0 auto 14px}
+  .cta-band .sub{color:var(--on-plum-body);max-width:500px;margin:0 auto 28px}
+  .cta-band .trust{color:var(--on-plum-body)}
 
-  /* ---------- Product cards ---------- */
-  .product-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:28px;
-    max-width:920px;
-    margin:0 auto;
-  }
-  @media (max-width:720px){
-    .product-grid{grid-template-columns:1fr;}
-  }
-  .product-card{
-    background:var(--ivory);
-    border:1px solid var(--line);
-    border-radius:3px;
-    padding:34px 30px;
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-  }
-  .product-card .num{
-    font-family:'Cormorant Garamond', serif;
-    font-style:italic;
-    color:var(--plum);
-    font-size:1rem;
-  }
-  .product-name{
-    font-family:'Cormorant Garamond', serif;
-    font-size:1.5rem;
-    color:var(--ink);
-  }
-  .product-note{
-    color:var(--body-copy);
-    font-size:0.96rem;
-    line-height:1.65;
-  }
-  .product-price{
-    margin-top:auto;
-    padding-top:14px;
-    border-top:1px solid var(--line);
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    font-size:0.92rem;
-    color:var(--muted-copy);
-  }
-  .product-price .val{
-    text-decoration:line-through;
-    text-decoration-color:var(--brick);
-  }
-  .product-price .included{
-    color:var(--plum);
-    font-family:'Jost', sans-serif;
-    font-weight:500;
-  }
+  footer{background:var(--ink);color:var(--ivory-dim);padding:28px 20px 110px;text-align:center;font-size:.82rem}
 
-  /* ---------- Pull quote ---------- */
-  .pullquote{
-    max-width:680px;
-    margin:0 auto;
-    text-align:center;
-  }
-  .pullquote p{
-    font-family:'Cormorant Garamond', serif;
-    font-style:italic;
-    font-size:clamp(1.4rem, 2.8vw, 1.8rem);
-    color:var(--ink);
-    line-height:1.45;
-  }
-
-  /* ---------- Steps ---------- */
-  .steps{
-    max-width:760px;
-    margin:0 auto;
-    display:flex;
-    flex-direction:column;
-    gap:0;
-  }
-  .step{
-    display:flex;
-    gap:24px;
-    padding:24px 0;
-    border-bottom:1px solid var(--line);
-  }
-  .step:last-child{border-bottom:none;}
-  .step .n{
-    font-family:'Cormorant Garamond', serif;
-    font-style:italic;
-    font-size:1.6rem;
-    color:var(--gold);
-    min-width:38px;
-  }
-  .step h3{
-    font-size:1.2rem;
-    margin-bottom:4px;
-    color:var(--ink);
-  }
-  .step p{
-    color:var(--body-copy);
-    font-size:0.96rem;
-  }
-
-  /* ---------- Final CTA band ---------- */
-  .cta-band{
-    background:var(--plum);
-    color:var(--ivory);
-    text-align:center;
-    padding:80px 32px;
-  }
-  .cta-band h2{
-    color:var(--ivory);
-    font-size:clamp(1.8rem, 3.4vw, 2.4rem);
-    max-width:600px;
-    margin:0 auto 18px;
-  }
-  .cta-band p.sub{
-    color:var(--on-plum-body);
-    max-width:500px;
-    margin:0 auto 34px;
-    font-size:1.02rem;
-  }
-  .cta-band .btn-primary{
-    background:var(--gold);
-    color:var(--ink);
-  }
-  .cta-band .note{
-    margin-top:16px;
-    font-size:0.85rem;
-    color:var(--on-plum-body);
-  }
-
-  /* ---------- Footer ---------- */
-  footer{
-    background:var(--ink);
-    color:var(--on-ink-body);
-    padding:44px 32px;
-  }
-  .footer-row{
-    max-width:1120px;
-    margin:0 auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:20px;
-  }
-  footer nav{
-    display:flex;
-    gap:26px;
-    flex-wrap:wrap;
-  }
-  footer nav a{
-    color:var(--on-ink-body);
-    text-decoration:none;
-    font-size:0.88rem;
-  }
-  footer nav a:hover{color:var(--gold-soft);}
-  footer .copy{
-    font-size:0.82rem;
-    color:var(--ivory-dim);
-    width:100%;
-    text-align:center;
-    margin-top:30px;
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    *{transition:none !important;}
-  }
+  /* sticky buy bar — mobile, shows after the hero button scrolls away */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(16,12,16,.96);backdrop-filter:blur(6px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:14px;transform:translateY(110%);transition:transform .25s ease}
+  .sticky.show{transform:none}
+  .sticky .p{color:var(--ivory);line-height:1.1;flex:none}
+  .sticky .p s{color:var(--ivory-dim);font-size:.85rem}
+  .sticky .p b{display:block;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.6rem;color:var(--gold-soft)}
+  .sticky .btn-primary{padding:14px 16px;font-size:1rem}
+  @media (min-width:900px){.sticky{display:none}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 <script src="tracking.js" defer></script>
 </head>
 <body>
 
-<header>
-  <div class="nav-row">
-    <a class="logo" href="index.html">Nailed and inspired</a>
-    <nav class="links">
-      <a href="index.html#gap">The Shift</a>
-      <a href="index.html#journey">The Journey</a>
-      <a href="index.html#pain">For You</a>
-      <a href="blog.html">Journal</a>
-      <a href="community.html">Community</a>
-    </nav>
-    <a class="nav-cta" href="https://buy.stripe.com/7sY7sKewd73Q5vp1CCg3609">Start Your Next Chapter</a>
-  </div>
-</header>
+<header><div class="nav-row"><span class="logo">Nailed and inspired</span></div></header>
 
-<!-- FOCAL HERO: mockup + price + CTA, everything else is validation below -->
 <section class="hero">
   <div class="wrap">
-    <span class="tag">Bundle</span>
-    <h1>Everything you need to stop planning her and start becoming her.</h1>
+    <span class="tag">The 90-Day Q4 Reset</span>
+    <h1>Stop planning her. <em>Start becoming her.</em></h1>
+    <p class="lede">There are less than 90 days left in 2026. Use them to reset your habits, confidence, goals, environment and identity — before 2027.</p>
     <div class="mockup-frame">
-      <img src="bundle-mockup.png" alt="The Next Chapter Bundle — 90-Day Reset Digital Workbook and Next Chapter Planner">
+      <img src="bundle-mockup.png" width="1200" height="900" fetchpriority="high" alt="The Next Chapter Bundle — 90-Day Reset Digital Workbook and Next Chapter Planner">
     </div>
-    <div class="price-row">
-      <span class="price-old">$61</span>
-      <span class="price-new">$25</span>
-    </div>
-    <a class="btn-primary" href="https://buy.stripe.com/7sY7sKewd73Q5vp1CCg3609">Get the Bundle — $25</a>
-    <p class="note">Instant digital download. Nothing to wait for.</p>
+    <div class="price-row"><span class="price-old">$61</span><span class="price-new">$25</span></div>
+    <span class="save">You save $36</span>
+    <a class="btn-primary buy" id="hero-buy" href="https://buy.stripe.com/7sY7sKewd73Q5vp1CCg3609">Get the Bundle — $25</a>
+    <div class="trust"><span>Instant PDF download</span><span>Apple Pay &amp; Cash App Pay</span><span>Pay in 4 with Klarna</span></div>
   </div>
 </section>
 
-<!-- everything below is validation for the decision already offered above -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Your next 90 days</span>
+      <h2>Five shifts. One new version of you.</h2>
+    </div>
+    <div class="pillars">
+      <div class="pillar"><span class="n">1</span><div><h3>Clarify your vision</h3><p>Get clear on the life you're actually building.</p></div></div>
+      <div class="pillar"><span class="n">2</span><div><h3>Upgrade your habits</h3><p>Small daily actions, big transformation.</p></div></div>
+      <div class="pillar"><span class="n">3</span><div><h3>Level up your mindset</h3><p>New thoughts, new standards.</p></div></div>
+      <div class="pillar"><span class="n">4</span><div><h3>Change your environment</h3><p>Your next level requires a new room.</p></div></div>
+      <div class="pillar"><span class="n">5</span><div><h3>Become her</h3><p>Walk, talk and act like the woman you're becoming.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="dim">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">This is for you if</span>
+      <h2>You know you're meant for more.</h2>
+    </div>
+    <ul class="foryou">
+      <li>You keep comparing yourself to women further along.</li>
+      <li>You're waiting to feel ready before you start.</li>
+      <li>Your circle asks "why are you doing all that?" instead of "what are you building?"</li>
+      <li>You're capable of more — and you're not living it yet.</li>
+    </ul>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <div class="section-head">
@@ -423,19 +190,21 @@
         <span class="num">One</span>
         <span class="product-name">90-Day Reset Digital Workbook</span>
         <p class="product-note">A guided path out of overwhelm — daily prompts and weekly resets built around the identity work that actually makes new habits stick, not just another routine you'll abandon by week two.</p>
-        <div class="product-price">
-          <span class="val">$27 alone</span>
-          <span class="included">Included</span>
-        </div>
+        <div class="product-price"><span class="val">$27 alone</span><span class="included">Included</span></div>
       </div>
       <div class="product-card">
         <span class="num">Two</span>
         <span class="product-name">Next Chapter Planner</span>
         <p class="product-note">For the version of you who's already decided. Map your goals, your environment, and the next 90 days in one place — built for a woman who's done waiting for the right moment.</p>
-        <div class="product-price">
-          <span class="val">$34 alone</span>
-          <span class="included">Included</span>
-        </div>
+        <div class="product-price"><span class="val">$34 alone</span><span class="included">Included</span></div>
+      </div>
+    </div>
+    <div class="stack"><span>Total value <s>$61</s></span><span>Today <b>$25</b></span></div>
+    <div class="guarantee">
+      <div class="seal">30-Day<br>Promise</div>
+      <div>
+        <h3>Do the work. If it doesn't work, it's free.</h3>
+        <p>Spend your first 30 days in the bundle and write down your daily actions each night — one entry for every one of those 30 days. If you've done that and don't feel the shift, email your 30 entries to <a href="mailto:nailedandinspired@outlook.com">nailedandinspired@outlook.com</a> within 45 days of purchase and we'll refund all $25.</p>
       </div>
     </div>
   </div>
@@ -452,30 +221,25 @@
     <div class="section-head">
       <span class="kicker">How it works</span>
       <h2>No courses to finish. No calls to book.</h2>
-      <p>Just open it and start.</p>
     </div>
     <div class="steps">
-      <div class="step">
-        <span class="n">1</span>
-        <div>
-          <h3>Get instant access</h3>
-          <p>Both files land in your inbox the moment you check out — no waiting on shipping or scheduling.</p>
-        </div>
-      </div>
-      <div class="step">
-        <span class="n">2</span>
-        <div>
-          <h3>Start your 90-day reset</h3>
-          <p>Work through the daily prompts at your pace. This is where the identity shift actually happens.</p>
-        </div>
-      </div>
-      <div class="step">
-        <span class="n">3</span>
-        <div>
-          <h3>Build your next chapter alongside it</h3>
-          <p>Use the planner to turn what's shifting in the workbook into a real, dated plan.</p>
-        </div>
-      </div>
+      <div class="step"><span class="n">1</span><div><h3>Get instant access</h3><p>Both files land in your inbox the moment you check out.</p></div></div>
+      <div class="step"><span class="n">2</span><div><h3>Start your 90-day reset</h3><p>Work through the daily prompts at your pace. This is where the identity shift actually happens.</p></div></div>
+      <div class="step"><span class="n">3</span><div><h3>Build your next chapter alongside it</h3><p>Use the planner to turn what's shifting in the workbook into a real, dated plan.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="dim">
+  <div class="wrap">
+    <div class="section-head"><span class="kicker">Questions</span><h2>Before you decide</h2></div>
+    <div class="faq">
+      <details><summary>How do I get it?</summary><p>Right after checkout, both files are sent to the email you enter. No account, no shipping, nothing to wait for.</p></details>
+      <details><summary>What format are the files?</summary><p>Both are PDFs. Open them on your phone, tablet or computer, or print them if you like writing on paper.</p></details>
+      <details><summary>Is this a course?</summary><p>No. There are no videos to watch and no calls to book — just open it and start.</p></details>
+      <details><summary>Can I split the payment?</summary><p>Yes. Klarna, Apple Pay and Cash App Pay are all available at checkout.</p></details>
+      <details><summary>What if it doesn't work for me?</summary><p>Do your first 30 days and document your daily actions each night — one entry for each of those 30 days. If you've done the work and don't feel the shift, email your 30 entries to <a href="mailto:nailedandinspired@outlook.com">nailedandinspired@outlook.com</a> any time between day 30 and day 45 after purchase, and you'll get a full refund.</p></details>
+      <details><summary>It's late in the year. Is it worth starting now?</summary><p>That's the point. The final 90 days decide who walks into 2027 — you can start today and finish the year as her.</p></details>
     </div>
   </div>
 </section>
@@ -484,24 +248,34 @@
   <div class="wrap">
     <h2>Her next chapter starts with one decision.</h2>
     <p class="sub">$61 worth of tools, built for the same shift, for $25 today.</p>
-    <a class="btn-primary" href="https://buy.stripe.com/7sY7sKewd73Q5vp1CCg3609">Get the Bundle — $25</a>
-    <p class="note">Instant digital download · No account needed</p>
+    <a class="btn-primary buy" href="https://buy.stripe.com/7sY7sKewd73Q5vp1CCg3609">Get the Bundle — $25</a>
+    <div class="trust"><span>Instant download</span><span>30-day do-the-work guarantee</span><span>Secure checkout by Stripe</span></div>
   </div>
 </div>
 
-<footer>
-  <div class="footer-row">
-    <a class="logo" href="index.html" style="font-size:1.1rem;">Nailed and inspired</a>
-    <nav>
-      <a href="index.html#gap">The Shift</a>
-      <a href="index.html#journey">The Journey</a>
-      <a href="index.html#pain">For You</a>
-      <a href="blog.html">Journal</a>
-      <a href="community.html">Community</a>
-    </nav>
-    <div class="copy">© Nailed &amp; Inspired</div>
-  </div>
-</footer>
+<footer>© Nailed &amp; Inspired</footer>
 
+<div class="sticky" id="sticky" aria-hidden="true">
+  <div class="p"><s>$61</s><b>$25</b></div>
+  <a class="btn-primary buy" href="https://buy.stripe.com/7sY7sKewd73Q5vp1CCg3609" tabindex="-1">Get the Bundle</a>
+</div>
+
+<script>
+  // Sticky bar: show once the hero button is off-screen
+  (function(){
+    var bar=document.getElementById('sticky'), hero=document.getElementById('hero-buy');
+    if(!('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function(e){ bar.classList.toggle('show', !e[0].isIntersecting && e[0].boundingClientRect.top<0); }).observe(hero);
+  })();
+
+  // TikTok events (fire only if the pixel base code above is installed)
+  (function(){
+    var item={contents:[{content_id:'next-chapter-bundle',content_type:'product',content_name:'The Next Chapter Bundle'}],value:25,currency:'USD'};
+    if(window.ttq) ttq.track('ViewContent', item);
+    document.querySelectorAll('a.buy').forEach(function(a){
+      a.addEventListener('click',function(){ if(window.ttq) ttq.track('InitiateCheckout', item); });
+    });
+  })();
+</script>
 </body>
 </html>

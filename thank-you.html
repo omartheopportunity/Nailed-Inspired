@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>You're in — Nailed &amp; Inspired</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&family=Jost:wght@300;500&display=swap" rel="stylesheet">
+
+<!-- ============ TIKTOK PIXEL ============
+     Paste the same TikTok pixel base code here too (replacing this comment). -->
+
+<style>
+  body{margin:0;background:#100C10;color:#F3ECE0;font-family:'Jost',sans-serif;font-weight:300;line-height:1.6;min-height:100vh;display:grid;place-items:center;text-align:center;padding:40px 20px}
+  .tag{display:inline-block;border:1px solid rgba(201,168,104,.28);color:#E4D3A6;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;border-radius:20px}
+  h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2rem,7vw,3rem);line-height:1.1;margin:18px 0 12px}
+  h1 em{color:#E4D3A6}
+  p{color:#D9D1C8;max-width:460px;margin:0 auto 12px}
+  a.btn{display:inline-block;margin-top:18px;background:#C9A868;color:#100C10;text-decoration:none;padding:15px 30px;border-radius:4px;font-weight:500}
+</style>
+<script src="tracking.js" defer></script>
+</head>
+<body>
+<main>
+  <span class="tag">Order confirmed</span>
+  <h1>You're in. <em>Welcome to your next chapter.</em></h1>
+  <p>Your 90-Day Reset Workbook and Next Chapter Planner are on their way to your inbox. If you don't see them in a few minutes, check your spam or promotions folder.</p>
+  <p>Day one starts today.</p>
+  <a class="btn" href="community.html">Find your people in the community</a>
+</main>
+<script>
+  // Fire CompletePayment once per real Stripe checkout (Stripe adds ?session_id=... on redirect)
+  (function(){
+    var id=new URLSearchParams(location.search).get('session_id');
+    if(!id || !window.ttq) return;
+    try{ if(localStorage.getItem('ni_paid_'+id)) return; localStorage.setItem('ni_paid_'+id,'1'); }catch(e){}
+    ttq.track('CompletePayment',{contents:[{content_id:'next-chapter-bundle',content_type:'product',content_name:'The Next Chapter Bundle'}],value:25,currency:'USD'},{event_id:id});
+  })();
+</script>
+</body>
+</html>
