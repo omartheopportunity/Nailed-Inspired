@@ -104,6 +104,13 @@
     .pp-ritual > div + div{border-left:none;border-top:1px solid var(--line);}
     .pp-section{padding:64px 0;}
   }
+
+  .pp-shelves{background:var(--ink-2);border-bottom:1px solid var(--line);}
+  .pp-shelves .wrap{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding-top:14px;padding-bottom:14px;}
+  .pp-shelves a{color:var(--ivory-dim);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;padding:9px 22px;border:1px solid transparent;border-radius:24px;}
+  .pp-shelves a:hover{color:var(--gold-soft);}
+  .pp-shelves a.on{border-color:var(--gold);color:var(--gold-soft);}
+  @media (max-width:640px){.pp-shelves a{padding:8px 14px;font-size:.74rem;}}
 </style>
 <script src="tracking.js" defer></script>
 </head>
@@ -125,6 +132,8 @@
   <a href="#shop" class="nav-cta">Shop The Ritual</a>
 </header>
 
+
+
 <!-- HERO: one product story, one action -->
 <section class="pp-hero">
   <div class="wrap pp-hero-grid">
@@ -145,6 +154,14 @@
     </div>
   </div>
 </section>
+
+<!-- SHELF SWITCHER (shared with products.html) -->
+<nav class="pp-shelves" aria-label="Product shelves">
+  <div class="wrap">
+    <a href="products.html" class="on">The Beauty Ritual</a>
+    <a href="gift-wrap-coffee.html">Gift Wrap &amp; Coffee</a>
+  </div>
+</nav>
 
 <!-- THE PRODUCTS -->
 <section class="pp-section" id="shop">
