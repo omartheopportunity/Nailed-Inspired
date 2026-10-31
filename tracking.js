@@ -64,4 +64,10 @@
       }
     });
   });
+  /* ---- Email opt-in popup (content pages only; logic lives in optin-popup.js) ---- */
+  try {
+    var op = document.createElement('script');
+    op.src = 'optin-popup.js'; op.defer = true;
+    document.head.appendChild(op);
+  } catch (e) {}
 })();
