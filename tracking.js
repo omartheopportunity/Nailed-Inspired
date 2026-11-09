@@ -59,7 +59,7 @@
     document.addEventListener('click', function (ev) {
       var a = ev.target.closest && ev.target.closest('a');
       if (!a || !a.href) return;
-      if (/bundle-|\/products\/|etsy\.com|shop\.tiktok\.com|skool\.com|checkout/i.test(a.href)) {
+      if (/bundle-|\/products\/|etsy\.com|amazon\.com|shop\.tiktok\.com|skool\.com|checkout/i.test(a.href)) {
         track('checkout', { value: 0, order_quantity: 1, line_items: [{ product_name: (a.textContent || '').trim().slice(0, 60) }] });
       }
     });

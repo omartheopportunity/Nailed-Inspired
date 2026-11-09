@@ -2,7 +2,7 @@
    Sends custom events when visitors click a call-to-action or submit a form.
    Events (view them under Events in Umami):
      cta-skool, cta-book-call, cta-register-form, cta-register, cta-join,
-     cta-checkout, cta-etsy, outbound-click, form-submit,
+     cta-checkout, cta-etsy, cta-amazon, outbound-click, form-submit,
      cta-<id> (Daily Roast buttons whose link is set by script) */
 (function () {
   function track(name, data) {
@@ -36,6 +36,7 @@
       return track('cta-register-form', data);
     }
     if (host.indexOf('stripe.com') !== -1) return track('cta-checkout', data);
+    if (/(^|\.)amazon\.com$/.test(host) || host === 'amzn.to') { data.product = el.getAttribute('data-amazon') || ''; data.shelf = el.getAttribute('data-shelf') || ''; data.url = u.pathname; return track('cta-amazon', data); }
     if (host.indexOf('etsy.com') !== -1) { data.url = u.pathname; return track('cta-etsy', data); }
     if (/(^|\/)register[^\/]*\.html$/.test(u.pathname)) { data.target = u.pathname; return track('cta-register', data); }
     if (/(^|\/)join(\.html)?$/.test(u.pathname)) { data.target = u.pathname; return track('cta-join', data); }
