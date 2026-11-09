@@ -1,0 +1,5 @@
+{
+  "headers": [
+    { "source": "/pin-data/(.*)", "headers": [ { "key": "Access-Control-Allow-Origin", "value": "*" }, { "key": "X-Robots-Tag", "value": "noindex" } ] }
+  ]
+}
