@@ -29,6 +29,58 @@
   <a href="#join" class="nav-cta">Start Your Next Chapter</a>
 </header>
 
+<!-- Email opt-in, moved to the top of the page (same list + offer as the old popup) -->
+<section class="top-optin" id="topOptin" aria-labelledby="topOptinH">
+  <style>
+    .top-optin{position:relative;z-index:2;background:linear-gradient(180deg,#17111A,#100C10);border-bottom:1px solid var(--line);padding:92px 22px 26px;text-align:center}
+    .top-optin .to-in{max-width:620px;margin:0 auto}
+    .top-optin .to-eyebrow{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .top-optin h2{font-size:clamp(1.6rem,4.6vw,2.2rem);line-height:1.1;color:var(--ivory);margin-bottom:8px}
+    .top-optin p.to-sub{color:var(--ivory-dim);font-size:.98rem;margin-bottom:16px}
+    .top-optin form{display:flex;gap:10px;max-width:520px;margin:0 auto}
+    .top-optin input{flex:1;min-width:0;padding:14px;border:1px solid var(--line);background:#fff;color:#241318;font:inherit;font-size:16px;border-radius:2px}
+    .top-optin button{padding:14px 22px;border:0;border-radius:2px;background:var(--gold);color:var(--ink);font:inherit;font-weight:500;letter-spacing:.06em;cursor:pointer;white-space:nowrap}
+    .top-optin button[disabled]{opacity:.6;cursor:default}
+    .top-optin .to-err{color:#e7a08a;font-size:.85rem;min-height:18px;margin-top:8px}
+    .top-optin .to-note{font-size:.78rem;color:var(--ivory-dim);margin-top:6px}
+    @media (max-width:520px){.top-optin form{flex-direction:column}}
+  </style>
+  <div class="to-in">
+    <p class="to-eyebrow">Nailing your look is step one</p>
+    <h2 id="topOptinH">Become Her &mdash; join the list</h2>
+    <p class="to-sub">Weekly reset texts, confidence tips &amp; women-only events for the woman you&rsquo;re becoming. Takes ten seconds.</p>
+    <form id="topOptinForm" novalidate>
+      <input type="email" name="email" placeholder="you@email.com" autocomplete="email" aria-label="Email address" required>
+      <button type="submit">Join the list</button>
+    </form>
+    <p class="to-err" role="alert"></p>
+    <p class="to-note">No spam. Unsubscribe anytime.</p>
+  </div>
+  <script>
+  (function(){
+    var f=document.getElementById('topOptinForm'); if(!f) return;
+    var err=document.querySelector('#topOptin .to-err'), btn=f.querySelector('button'), inp=f.email;
+    try{ var st=JSON.parse(localStorage.getItem('ni_optin_state')||'{}'); if(st.done){ document.getElementById('topOptin').style.display='none'; } }catch(e){}
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var email=(inp.value||'').trim();
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){ err.textContent='Please enter a valid email address.'; inp.focus(); return; }
+      err.textContent=''; btn.disabled=true; btn.textContent='Saving...';
+      var src='';
+      try{ var u=JSON.parse(sessionStorage.getItem('ni_utm')||'{}'); src=' | from: '+(u.utm_source||'direct')+' '+(u.utm_campaign||'')+' '+(u.utm_content||'')+' @index.html'; }catch(x){ src=' | from: direct @index.html'; }
+      var body=new URLSearchParams(); body.append('entry.1825262067',email); body.append('entry.866244110','Top of page'+src);
+      fetch('https://docs.google.com/forms/d/e/1FAIpQLScBecL9eSqa8flRzst3Z_YT2gsx0buz-Aaisvs7qgEKj3TOPA/formResponse',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body.toString()}).then(function(){
+        try{ if(window.umami) window.umami.track('optin-signup',{page:location.pathname,placement:'top'}); }catch(x){}
+        try{ if(window.pintrk) window.pintrk('track','lead',{lead_type:'top',property:location.pathname}); }catch(x){}
+        try{ localStorage.setItem('ni_optin_state',JSON.stringify({t:Date.now(),done:true})); }catch(x){}
+        f.outerHTML='<h2 style="font-size:1.8rem">Welcome to the room.</h2><p class="to-sub">Watch your inbox. Your first reset is on the way.</p>';
+      }).catch(function(){ err.textContent='That did not go through. Check your connection and try again.'; btn.disabled=false; btn.textContent='Join the list'; });
+    });
+  })();
+  </script>
+</section>
+
+
 <section class="hero">
   <svg class="linework" viewBox="0 0 500 640" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M250 40 C 150 120, 120 260, 180 360 C 220 430, 320 440, 340 520 C 350 560, 320 600, 260 600" stroke="#C9A868" stroke-width="1" opacity="0.55"/>

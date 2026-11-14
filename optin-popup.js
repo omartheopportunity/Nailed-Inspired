@@ -8,7 +8,7 @@
      source so you can see which pin or board produced the signup. */
 (function () {
   var path = location.pathname.split('/').pop() || 'index.html';
-  var skip = /^(join|quiz|era-quiz|products|bundle-next-chapter|gift-wrap-coffee)(\.html)?$/;
+  var skip = /^(index|join|quiz|era-quiz|products|bundle-next-chapter|gift-wrap-coffee)(\.html)?$/;
   var force = /[?&]optin=1/.test(location.search);
   if (skip.test(path) && !force) return;
 
