@@ -47,11 +47,11 @@
       '<button class="nio-x" type="button" aria-label="Close">&times;</button>' +
       '<div class="nio-body">' +
       '<p class="nio-eyebrow">Nailing your look is step one</p>' +
-      '<h2 class="nio-h" id="nio-h">Become Her &mdash; join the list</h2>' +
+      '<h2 class="nio-h" id="nio-h">Become Her &mdash; start becoming today</h2>' +
       '<p class="nio-p">Weekly reset texts, confidence tips &amp; women-only events for the woman you&rsquo;re becoming. Takes ten seconds.</p>' +
       '<form novalidate><input class="nio-in" type="email" name="email" placeholder="you@email.com" autocomplete="email" aria-label="Email address" required>' +
       '<p class="nio-err" role="alert"></p>' +
-      '<button class="nio-btn" type="submit">Join the list</button></form>' +
+      '<button class="nio-btn" type="submit">Start becoming today</button></form>' +
       '<button class="nio-skip" type="button">No thanks</button>' +
       '<p class="nio-note">No spam. Unsubscribe anytime.</p>' +
       '</div></div>';
